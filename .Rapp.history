@@ -1,0 +1,3294 @@
+247870-245339
+607097/1037409
+58/(607097/1037409)
+178776+8308+3948
+(178776+8308+3948)/217601
+1.067+1.96*0.3168
+1.136-1.067
+0.069/1.136
+pnorm(2.058)
+pchisq(2.058,lower.tail=F)
+pchisq(2.058,df=1,lower.tail=F)
+pt(2.058,df=1,lower.tail=F)
+1.067/0.03168
+log(1.067)/0.03168
+qt(0.025,1,lower.tail=F)
+qt(0.025,1,lower.tail=T)
+qt(0.05,1,lower.tail=T)
+qt(0.05,1,lower.tail=F)
+exp(log(1.067)+6.31*0.3168)
+log(1.136)
+beta<-log(1.067)
+beta
+log(1.136)-beta
+(log(1.136)-beta)/0.03168
+exp(log(1.067)+1.96*0.3168)
+exp(log(1.067)+1.978*0.3168)
+exp(log(1.067)+1.96*0.03168)
+qt(0.05,1,0,lower.tail=F)
+exp(log(0.9762)-1.96*0.1263)
+exp(log(1.0670)-1.96*0.03168)
+pnorm(2.058,lower.tail=F)
+comp.allele <- function(allele){switch(allele, A=T, T=A, C=G, G=C)}
+comp.allele(A)
+comp.allele <- function(allele){switch(allele, 'A'='T', 'T'='A', 'C'='G', 'G'='C')}
+comp.allele("A")
+comp.allele <- function(alist){#
+	lapply(alist, function(allele){switch(allele, 'A'='T', 'T'='A', 'C'='G', 'G'='C')})#
+}
+comp.allele <- function(alist){#
+	unlist(lapply(alist, function(allele){switch(allele, 'A'='T', 'T'='A', 'C'='G', 'G'='C')}))#
+}
+comp.allele(c("A","T"))
+comp.allele(c("A","T")) == c("T","C")
+comp.allele
+x=1:10
+y=2:11
+min(x,y)
+floor(x,y)
+floor(0.000001)
+10^-0.72399801
+x=1:3
+r2.plot(d, "P", c(0,0.005,0.05,0.1,0.5,1), "AF")#
+r2.plot(d, "P", c(0,0.005,0.05,0.1,0.5,1), "AF")
+r2.plot(d, "P", c(0,0.005,0.05,0.1,0.5,1), "AF")
+text(bmp, x + .03*max(x), x)
+bmp <- barplot(x, ylim = c(0, 1.1*max(x)))
+filestr<-sprintf("StateList.txt")#
+Predictions<-read.table(filestr,header=T)   # the table has a header row
+x<-matrix(1:12,3,4)x<-matrix(1:12,3,4)
+x<-matrix(1:12,3,4)
+x>4
+subset(x,x>4)
+x[x>4]
+length(x>4)
+sprintf("%s is %f feet tall\n", "Sven", 7.1)      # OK
+Debugger
+Debugger()
+f <- function(x){#
+	return((x-2)^3)#
+}
+f(2)
+f(1)
+x <- 1:100#
+y <- c()#
+for(i in x){#
+	y <- c(y, f(i))#
+}
+x <- -50:50#
+y <- c()#
+for(i in x){#
+	y <- c(y, f(i))#
+}
+head(y)
+plot(x,y)
+lines(1:100,f())
+lines(x,y)
+plot(x,y,type="l")
+f <- function(x){#
+	return(c((x-2)^3,3*(x-2)^2))#
+}#
+#
+x <- -50:50#
+y <- c()#
+for(i in x){y <- c(y, f(i)[1])}#
+plot(x,y,type="l")
+NewtonRaphson <- function(f, x0, Niter, Tol){#
+	x <- x0#
+	n <- 0#
+	while(n<=Niter){#
+		y <- f(x)[1]#
+		if(abs(y)<=Tol) break#
+		coef <- f(x)[2]#
+		x <- x - y/coef#
+		n <- n + 1#
+	}#
+	return(c(x,n))#
+}
+NewtonRaphson(f, 100, 1000, 0.00000001)
+f <- function(x){#
+	return(c((x-2)^3,3*(x-2)^2))#
+}#
+#
+x <- -50:50#
+y <- c()#
+for(i in x){y <- c(y, f(i)[1])}#
+plot(x,y,type="l")#
+#
+NewtonRaphson <- function(f, x0, Niter, Tol){#
+	x <- x0#
+	n <- 0#
+	while(n<=Niter){#
+		y <- f(x)[1]#
+		if(abs(y)<=Tol) break#
+		coef <- f(x)[2]#
+		x <- x - y/coef#
+		n <- n + 1#
+	}#
+	return(paste("x=",x," after ",n,"iterations.",sep=""))#
+}#
+#
+NewtonRaphson(f, 100, 1000, 0.00000001)
+f <- function(x){#
+	return(c((x-2)^3,3*(x-2)^2))#
+}#
+#
+x <- -50:50#
+y <- c()#
+for(i in x){y <- c(y, f(i)[1])}#
+plot(x,y,type="l")#
+#
+NewtonRaphson <- function(f, x0, Niter, Tol){#
+	x <- x0#
+	n <- 0#
+	while(n<=Niter){#
+		y <- f(x)[1]#
+		if(abs(y)<=Tol) break#
+		coef <- f(x)[2]#
+		x <- x - y/coef#
+		n <- n + 1#
+	}#
+	return(paste("x =",x,"after",n,"iterations.",sep=" "))#
+}#
+#
+NewtonRaphson(f, 100, 1000, 0.00000001)
+deriv(y~(x-2)^3)
+deriv(y~(x-2)^3, c("x","y"), func=T)
+deriv(y~(x-2)^3, c("x","y"))
+deriv(~(x-2)^3,"x")
+trig.exp <- expression(sin(cos(x + y^2)))#
+( D.sc <- D(trig.exp, "x") )#
+all.equal(D(trig.exp[[1]], "x"), D.sc)#
+#
+( dxy <- deriv(trig.exp, c("x", "y")) )#
+y <- 1#
+eval(dxy)#
+eval(D.sc)
+deriv(~ x^2, "x")
+t=deriv(~ x^2, "x")
+length(t)
+install.packages("Ryacas")
+library(Ryacas)
+Simplify(t)
+t <- D((x-2)^3)
+t <- D((x-2)^3,"x")
+t <- D(~(x-2)^3,"x")
+t <- D(expression((x-2)^3),"x")
+class(t)
+as.character(t)
+expression(t)
+str(t)
+print(t)
+as.vector(t)
+class(as.vector(t))
+eval(t)
+fPrime <- D(expression(f),"x")
+t
+c(1,t)
+c(1,t)[2]
+f2 <- function(x){#
+	return(c((x-2)^3-6x,3*(x-2)^2-6))#
+}#
+NewtonRaphson(f2, 100, 1000, 0.00000001)
+f2 <- function(x){#
+	return(c((x-2)^3-6x,3*(x-2)^2-6))#
+}
+f1 <- function(x){#
+	return(c((x-2)^3,3*(x-2)^2))#
+}
+f2 <- function(x){#
+	return(c((x-2)^3-6*x,3*(x-2)^2-6))#
+}#
+NewtonRaphson(f2, 100, 1000, 0.00000001)
+f3 <- function(x){#
+	return(c(sin(x),cos(x)))#
+}#
+NewtonRaphson(f3, 100, 1000, 0.00000001)
+x <- rep(-100,100,5)
+x <- rep(c(-100,100),5)
+x <- seq(-100,100,5)
+head(x)
+NewtonRaphson <- function(f, x0, Niter, Tol){#
+	x <- x0#
+	n <- 0#
+	while(n<=Niter){#
+		y <- f(x)[1]#
+		if(abs(y)<=Tol) break#
+		coef <- f(x)[2]#
+		x <- x - y/coef#
+		n <- n + 1#
+	}#
+	x <- seq(-100,100,5)#
+	y <- c()#
+	for(i in x){y <- c(y, f(i)[1])}#
+	plot(x,y,type="l")#
+	return(paste("x =",x,"after",n,"iterations.",sep=" "))#
+}#
+f1 <- function(x){#
+	return(c((x-2)^3,3*(x-2)^2))#
+}#
+NewtonRaphson(f1, 100, 1000, 0.00000001)
+NewtonRaphson <- function(f, x0, Niter, Tol){#
+	x <- seq(-100,100,5)#
+	y <- c()#
+	for(i in x){y <- c(y, f(i)[1])}#
+	plot(x,y,type="l")#
+	x <- x0#
+	n <- 0#
+	while(n<=Niter){#
+		y <- f(x)[1]#
+		if(abs(y)<=Tol) break#
+		coef <- f(x)[2]#
+		x <- x - y/coef#
+		n <- n + 1#
+	}#
+	return(paste("x =",x,"after",n,"iterations.",sep=" "))#
+}#
+f1 <- function(x){#
+	return(c((x-2)^3,3*(x-2)^2))#
+}#
+NewtonRaphson(f1, 100, 1000, 0.00000001)
+NewtonRaphson <- function(f, x0, Niter, Tol){#
+	x <- seq(-100,100,5)#
+	y <- c()#
+	for(i in x){y <- c(y, f(i)[1])}#
+	plot(x,y,type="l")#
+	x <- x0#
+	n <- 0#
+	while(n<=Niter){#
+		y <- f(x)[1]#
+		if(abs(y)<=Tol) break#
+		x1 <- x#
+		y1 <- y #
+		coef <- f(x)[2]#
+		x <- x - y/coef#
+		x2 <- x#
+		y2 <- f(x)[1]#
+		segments(x1,y1,x2,y2)#
+		n <- n + 1#
+	}#
+	return(paste("x =",x,"after",n,"iterations.",sep=" "))#
+}#
+#
+f1 <- function(x){#
+	return(c((x-2)^3,3*(x-2)^2))#
+}#
+NewtonRaphson(f1, 100, 1000, 0.00000001)
+NewtonRaphson <- function(f, x0, Niter, Tol){#
+	x <- seq(-100,100,5)#
+	y <- c()#
+	for(i in x){y <- c(y, f(i)[1])}#
+	plot(x,y,type="l")#
+	x <- x0#
+	n <- 0#
+	while(n<=Niter){#
+		y <- f(x)[1]#
+		if(abs(y)<=Tol) break#
+		x1 <- x#
+		y1 <- y #
+		coef <- f(x)[2]#
+		x <- x - y/coef#
+		x2 <- x#
+		y2 <- f(x)[1]#
+		segments(x1,y1,x2,y2,col="blue",lty="dashed")#
+		n <- n + 1#
+	}#
+	return(paste("x =",x,"after",n,"iterations.",sep=" "))#
+}#
+#
+f1 <- function(x){#
+	return(c((x-2)^3,3*(x-2)^2))#
+}#
+NewtonRaphson(f1, 100, 1000, 0.00000001)
+plot(x,y,type="l")#
+	abline(h=0)
+NewtonRaphson <- function(f, x0, Niter, Tol){#
+	x <- seq(-100,100,5)#
+	y <- c()#
+	for(i in x){y <- c(y, f(i)[1])}#
+	plot(x,y,type="l",col="red")#
+	abline(h=0)#
+	abline(v=0)#
+#
+	x <- x0#
+	n <- 0#
+	while(n<=Niter){#
+		y <- f(x)[1]#
+		if(abs(y)<=Tol) break#
+		x1 <- x#
+		y1 <- y #
+		coef <- f(x)[2]#
+		x <- x - y/coef#
+		x2 <- x#
+		y2 <- f(x)[1]#
+		segments(x1,y1,x2,y2,col="blue",lty="dashed")#
+		n <- n + 1#
+	}#
+	return(paste("x =",x,"after",n,"iterations.",sep=" "))#
+}#
+#
+f1 <- function(x){#
+	return(c((x-2)^3,3*(x-2)^2))#
+}#
+NewtonRaphson(f1, 100, 1000, 0.00000001)
+NewtonRaphson <- function(f, x0, Niter, Tol){#
+	x <- seq(-100,100,5)#
+	y <- c()#
+	for(i in x){y <- c(y, f(i)[1])}#
+	plot(x,y,type="l",col="red")#
+	abline(h=0)#
+	abline(v=0)#
+#
+	x <- x0#
+	n <- 0#
+	while(n<=Niter){#
+		y <- f(x)[1]#
+		if(abs(y)<=Tol) break#
+		x1 <- x#
+		y1 <- y #
+		segments(x1,y1,x1,0,col="blue",lty="dashed")#
+		coef <- f(x)[2]#
+		x <- x - y/coef#
+		x2 <- x#
+		y2 <- f(x)[1]#
+		segments(x1,y1,x2,y2,col="blue",lty="dashed")#
+		segments(x2,y2,x2,0,col="blue",lty="dashed")#
+		n <- n + 1#
+	}#
+	return(paste("x =",x,"after",n,"iterations.",sep=" "))#
+}#
+#
+f1 <- function(x){#
+	return(c((x-2)^3,3*(x-2)^2))#
+}#
+NewtonRaphson(f1, 100, 1000, 0.00000001)
+f <- function(x){#
+	return((100-x)*(99-x)*(98-x)*(97-x)*(96-x)*(95-x)/(100*99*98*97*96*95))#
+}#
+f(20)
+f(25)
+f(30)
+f(31)
+f <- function(x){#
+	return((101-x)*(100-x)*(99-x)*(98-x)*(97-x)*(96-x)/(100*99*98*97*96*95))#
+}#
+f(32)
+f <- function(x){#
+	return((101-x)*(100-x)*(99-x)*(98-x)*(97-x)*(96-x)/(100*99*98*97*96*95))#
+}#
+f(33)
+f <- function(x){#
+	return((100-x)*(99-x)*(98-x)*(97-x)*(96-x)*(95-x+6/x)/(100*99*98*97*96*95))#
+}#
+f(33)
+x=1
+95-x+6/x
+f <- function(x){#
+	return((100-x)*(99-x)*(98-x)*(97-x)*(96-x)*(95-x+6/x)/(100*99*98*97*96*95))#
+}#
+f(32)
+f <- function(x){#
+	return((100-x)*(99-x)*(98-x)*(97-x)*(96-x)*(95-x+6/x)/(100*99*98*97*96*95))#
+}#
+f(31)
+f <- function(x){#
+	return((100-x)*(99-x)*(98-x)*(97-x)*(96-x)*(95+5*x)/(100*99*98*97*96*95))#
+}#
+f(31)
+f(32)
+f(40)
+f(50)
+f(51)
+d <- read.table("~/Lab/GWAS Scan/PrCa meta/overall_Whites/novel_hits.txt", header=F)#
+write.table(d, "~/Lab/GWAS Scan/PrCa meta/overall_Whites/novel_hits.txt", quote=F, sep="")#
+write.table(d, "~/Lab/GWAS Scan/PrCa meta/overall_Whites/novel_hits.txt", quote=F, sep="\t", row.name=F, col.name=F)#
+#
+write.table(d, "~/Lab/GWAS Scan/PrCa meta/overall_multiethnic/novel_hits.txt", quote=F, sep="")#
+#
+write.table(d, "~/Lab/GWAS Scan/PrCa meta/overall_multiethnic/novel_hits.txt", quote=F, sep="\t", row.name=F, col.name=F)#
+write.table(d, "~/Lab/GWAS Scan/PrCa meta/overall_multiethnic/novel_hits.txt", quote=F, sep="")#
+#
+#
+d <- read.table("~/Lab/GWAS Scan/PrCa meta/overall_multiethnic/novel_hits.txt", header=F)#
+#
+write.table(d, "~/Lab/GWAS Scan/PrCa meta/overall_multiethnic/novel_hits.txt", quote=F, sep="")#
+#
+#
+#
+d <- read.table("~/Lab/GWAS Scan/PrCa meta/overall_multiethnic/novel_hits.txt", header=F)#
+#
+#
+dim(d)#
+head(d)#
+write.table(d, "~/Lab/GWAS Scan/PrCa meta/overall_multiethnic/novel_hits.txt", quote=F, sep="")#
+#
+#
+#
+#
+write.table(d, "~/Lab/GWAS Scan/PrCa meta/overall_multiethnic/novel_hits.txt", quote=F, sep="\t", row.name=F, col.name=F)#
+#
+d <- read.table("~/Lab/GWAS Scan/PrCa meta/38novel_hits.txt", header=F, stringsAsFactors=F)#
+write.table(d,"~/Lab/GWAS Scan/PrCa meta/38novel_hits.txt", quote=F, sep="\t", row.name=F, col.name=F)#
+dim(d)#
+log(0.00000005,base=10)#
+872.18、4#
+872.18/4#
+#
+872.18/2#
+#
+#
+436.09-88.73#
+783.45-436.09#
+31118511-31074030#
+cor(x+y, x-2*y)#
+x<-rnorm(-1,1)#
+x<-rnorm(100,-1,1)#
+#
+y<-rnorm(100,1,1)#
+#
+#
+cor(x+y, x-2*y)#
+#
+y<-rnorm(1000,1,1)#
+#
+#
+#
+x<-rnorm(1000,-1,1)#
+#
+#
+cor(x+y, x-2*y)#
+#
+#
+x<-rnorm(10000,-1,1)#
+#
+#
+#
+y<-rnorm(10000,1,1)#
+#
+#
+#
+#
+cor(x+y, x-2*y)#
+#
+#
+#
+sqrt(10)#
+cov(x+y, x-2*y)#
+#
+#
+#
+#
+30/35#
+pchisq(30/35,1)#
+pchisq(42/30,1)#
+#
+pchisq(30/42,1)#
+#
+#
+pchisq(30/42,124*(6*7-5*6)^2/(12*12*11*13))#
+#
+#
+#
+24*(6*7-5*6)^2/(12*12*11*13)#
+pchisq(24*(6*7-5*6)^2/(12*12*11*13),1)#
+#
+pchisq(24*(6*7-5*6)^2/(12*12*11*13),1, lower.tail=F)#
+#
+#
+pchisq(24*(5*7-5*7)^2/(12*12*12*12),1, lower.tail=F)#
+#
+#
+#
+setwd("~/AAPC_fine_mapping")#
+#setwd("/Users/Serena/Haiman's Lab/AAPC Fine mapping")#
+library(Design)#
+library(rms)#
+data <- read.delim("8q24_p0.05", header=T, stringsAsFactors=F)#
+0.05/137#
+(0.9*0.95+0.05*(1-0.95))*0.002+(0.9*0.94+0.05*(1-0.94))*(1-0.002)#
+(0.9*0.29+0.05*(1-0.29))*0.002+(0.9*0.001+0.05*(1-0.001))*(1-0.002)#
+#
+0.849*0.001/(0.849*0.001+0.0513*(1-0.001))#
+0.95*0.001*0.002+0.29*(1-0.001)*0.002#
+(0.94*0.001+0.001*(1-0.001))*(1-0.002)+0.000581#
+0.000581/0.002516#
+0.95*0.002/0.002516#
+0.95*0.002/(0.95*0.002+0.94*(1-0.002))#
+1854+3706+474+1458+20219+2782 +4600#
+1894+3884+482+512+20440+4458 +2929#
+read.delim("~/Lab/AAPC replication and fine-mapping/8q24/Local_Ancestry_8q24_Peak_9641.txt")#
+t <- read.delim("~/Lab/AAPC replication and fine-mapping/8q24/Local_Ancestry_8q24_Peak_9641.txt")#
+dim(t)#
+t <- read.delim("~/Lab/AAPC replication and fine-mapping/8q24/Local_Ancestry_8q24_Peak_9641.txt", header=T)#
+#
+t <- read.delim("~/Lab/AAPC replication and fine-mapping/8q24/Local_Ancestry_8q24_Peak_9641.txt", header=F)#
+#
+#
+lt#
+head(t)#
+t2 <- t[1,]#
+t2 <- as.numeric(t[1,])#
+#
+head(t2)#
+sum(t2==2)#
+sum(t2>1.5)#
+sum(t2>=1.5)#
+#
+setwd("~/AAPC_replication_and_fine-mapping")#
+cov <- read.delim("~/AAPC/aapc.cov", header=T, stringsAsFactors=F)#
+77.28*(1-0.5^2) + 79.11*(0.5^2) #
+exp(log(1.06)*(77.74-77.28))#
+(1.03-1)/(1.52-1)×#
+(1.03-1)/(1.52-1)#
+exp(log(1.13)*(77.74-77.28))#
+#
+(1.06-1)/(1.52-1)#
+#
+cov <- read.delim("~/Lab/AAPC replication and fine-mapping/aapc.cov", header=T, stringsAsFactor=F)#
+cov <- read.delim("~/Lab/AAPC replication and fine-mapping/aapc.cov", header=T, stringsAsFactors=F)#
+#
+head(cov)#
+id <- read.delim("~/Desktop/aapc_laapc_id.txt", header=T, stringsAsFactors=F)#
+head(id)#
+identical(id[,1], id[,2]#
+)#
+d <- cov[is.element(cov$IID,id[,1]),]#
+dim(d)#
+dim(id)#
+write.table(d[,c("IID",paste("PC",1:10,sep=""))], "laapc_10pcs.txt", quote=F, sep="\t", col.name=T, row.name=F)#
+getwd()#
+65*.79+84*.21#
+49*.21+65*.79#
+65*.21+83*.79#
+518*21#
+518*.21#
+#
+100/518#
+p1=1e-50#
+pchisq(2*log(0.01)+qchisq(p1,1,lower.tail=F),1,lower.tail=F)#
+1e-3#
+p1=1e-5#
+p2=pchisq(2*log(0.01)+qchisq(p1,1,lower.tail=F),1,lower.tail=F)#
+p1=1e-49#
+p2=pchisq(2*log(0.01)+qchisq(p1,1,lower.tail=F),1,lower.tail=F)#
+#
+p2#
+qnorm(1e-50,lower.tail=F)*2#
+qnorm(1e-50/2,lower.tail=F)#
+#
+qnorm(1.020987e-48/2,lower.tail=F)#
+qnorm(1e-5/2,lower.tail=F)#
+#
+qnorm(0.001329523/2,lower.tail=F)#
+#
+#
+d <- read.csv("CH0702_trans_eqtl.csv", header=T, stringsAsFactors=F)#
+setwd("~/ME_fine_mapping/")#
+#
+# index SNPs#
+d <- read.csv("CH0702_trans_eqtl.csv", header=T, stringsAsFactors=F)#
+#
+N=10#
+MAF=0.3#
+G <- rbinom(N, 2, MAF) #
+G#
+alpha =0#
+beta=0.02#
+setseed(1128)#
+Y <- rbinom(N, 1, 0.4960001)#
+#
+Y <- rbinom(N, 1, 0.5010000)#
+#
+#
+Y <- rbinom(N, 1, 0.5059997)#
+#
+#
+Y <- rbinom(N, 1, PrY[1:2])#
+#
+beta=0.2#
+eta <- alpha + beta*(G-mean(G))#
+#
+eta#
+PrY <- exp(eta)/(1+exp(eta))#
+#
+PrY#
+exp(0.2)#
+Y <- rbinom(N, 1, PrY)#
+#
+Y <- rbinom(N, 1, PrY)#
+set.seed(1128)#
+Y <- rbinom(1, 1, PrY[1])#
+#
+set.seed(1128)#
+#
+Y <- rbinom(1, 1, PrY[2])#
+#
+#
+set.seed(1128)#
+#
+#
+Y <- rbinom(1, 1, PrY[3])#
+#
+#
+#
+set.seed(1128)#
+#
+#
+#
+Y <- rbinom(1, 1, PrY[10])#
+#
+#
+#
+#
+Y#
+beta=0.0135#
+hat(beta_m)#
+hat(beta)#
+#
+hat(x)#
+rnorm(0.5, 1)#
+rnorm(1,0.5, 1)#
+#
+(71-8)/71#
+61/71#
+71-13#
+58/71#
+71-26#
+63/71#
+56/66#
+57/70#
+66-25#
+41/66#
+24/33#
+15/33#
+binom.test(71, 17011, p=.5, alternative="greater")#
+binom.test(68, 82, p=.5, alternative="greater")#
+#
+13/33#
+binom.test(71, 17011, p=.001, alternative="greater")#
+#
+binom.test(50, 50, p=.001, alternative="greater")#
+#
+#
+binom.test(50, 50, p=.5, alternative="greater")#
+#
+#
+#
+31/33#
+33/32#
+32/33#
+install.packages("Geneland")#
+install.packages("nlme")#
+install.packages("lattice")#
+#
+library(lattice)#
+find("Spruce")#
+class("Milk")#
+dim("Milk")#
+Milk#
+class(Milk)#
+dim(Milk)#
+head(Milk)#
+find("Milk")#
+find(Milk)#
+names(Milk)#
+search()#
+xyplot(protein~Time, data=Milk, groups=Dietm type="l", autokey=T)#
+xyplot(protein~Time, data=Milk, groups=Diet, type="l", autokey=T)#
+xyplot(protein~Time, data=Milk, groups=Diet, type="l", auto.key=T)#
+table(Milk$Diet)#
+Milk.Barley <- Milk[Milk$Diet=="barley",]#
+Milk.BL <- Milk[Milk$Diet=="barley+lupins",]#
+Milk.Lupins <- Milk[Milk$Diet=="lupins",]#
+plt1 <- xyplot(protein~Time, data=Milk.Barley, groups=Cow, type="l")#
+print(plt1, psisition=c(0,0.65,1,1), more=T)#
+print(plt2, psisition=c(0,0.4,1,0.7), more=T)#
+print(plt3, psisition=c(0,0,1,0.4))#
+plt1 <- xyplot(protein~Time, data=Milk.Barley, groups=Cow, type="l")#
+plt2 <- xyplot(protein~Time, data=Milk.BL, groups=Cow, type="l")#
+plt3 <- xyplot(protein~Time, data=Milk.Lupins, groups=Cow, type="l")#
+#
+print(plt1, psisition=c(0,0.65,1,1), more=T)#
+print(plt2, psisition=c(0,0.4,1,0.7), more=T)#
+print(plt3, psisition=c(0,0,1,0.4))#
+install.packages("gridExtra")#
+plt1 <- xyplot(protein~Time, data=Milk.Barley, groups=Cow, type="l")#
+plt2 <- xyplot(protein~Time, data=Milk.BL, groups=Cow, type="l")#
+plt3 <- xyplot(protein~Time, data=Milk.Lupins, groups=Cow, type="l")#
+#
+print(plt1, position=c(0,0.65,1,1), more=T)#
+print(plt2, position=c(0,0.4,1,0.7), more=T)#
+print(plt3, position=c(0,0,1,0.4))#
+#
+install.packages("gridExtra")#
+library(gridExtra)#
+grid.arrange(plt1, plt2, plt2, ncol=1, nrow=1)#
+grid.arrange(plt1, plt2, plt3, ncol=1, nrow=1)#
+boxplot(protein~Diet, Milk)#
+plot(Milk$Time, Milk$protein, pch=10)#
+#Q8#
+plot(Milk$Time, Milk$protein, pch=20)#
+par(new=T)#
+smooth.spline(Milk$Time, Milk$protein, df=5)#
+plot(Milk$Time, Milk$protein, pch=20)#
+lines(smooth.spline(Milk$Time, Milk$protein, df=5))#
+par(nfrow=c(3,1))#
+plot(Milk.Barley$Time, Milk.Barley$protein, pch=20)#
+lines(smooth.spline(Milk.Barley$Time, Milk.Barley$protein, df=5))#
+plot(Milk.BL$Time, Milk.BL$protein, pch=20)#
+lines(smooth.spline(Milk.BL$Time, Milk.BL$protein, df=5))#
+table(Milk$TIme)#
+table(Milk$Time)#
+max(Milk$protein)#
+min(Milk$protein)#
+plot(c(1,19),c(2,5),xlim=c(1,19),ylim=c(2,5), col="white")#
+lines(smooth.spline(Milk.Barley$Time, Milk.Barley$protein, df=5, lty=4, col=4)#
+lines(smooth.spline(Milk.BL$Time, Milk.BL$protein, df=5), lty=6, col=6)#
+lines(smooth.spline(Milk.Lupins$Time, Milk.Lupins$protein, df=5), lty=1, col=1")#
+plot(c(1,19),c(2,5),xlim=c(1,19),ylim=c(2,5), col="white", main="Effect of diet on protein content", xlab="Time", ylab="protein content")#
+#
+lines(smooth.spline(Milk.Barley$Time, Milk.Barley$protein, df=5, lty=4, col=4)#
+lines(smooth.spline(Milk.BL$Time, Milk.BL$protein, df=5), lty=6, col=6)#
+lines(smooth.spline(Milk.Lupins$Time, Milk.Lupins$protein, df=5), lty=1, col=1)#
+#
+plot(c(1,19),c(2,5),xlim=c(1,19),ylim=c(2,5), col="white", main="Effect of diet on protein content", xlab="Time", ylab="protein content")#
+lines(smooth.spline(Milk.Barley$Time, Milk.Barley$protein, df=5, lty=4, col=4)#
+lines(smooth.spline(Milk.BL$Time, Milk.BL$protein, df=5), lty=6, col=6)#
+lines(smooth.spline(Milk.Lupins$Time, Milk.Lupins$protein, df=5), lty=1, col=1)#
+library(nlme)#
+lines(smooth.spline(Milk.Barley$Time, Milk.Barley$protein, df=5), lty=4, col=4)#
+lines(smooth.spline(Milk.BL$Time, Milk.BL$protein, df=5), lty=6, col=6)#
+lines(smooth.spline(Milk.Lupins$Time, Milk.Lupins$protein, df=5), lty=1, col=1)#
+par(nfrow=c(3,1))#
+plot(Milk.Barley$Time, Milk.Barley$protein, pch=20)#
+lines(smooth.spline(Milk.Barley$Time, Milk.Barley$protein, df=5))#
+#
+plot(Milk.BL$Time, Milk.BL$protein, pch=20)#
+lines(smooth.spline(Milk.BL$Time, Milk.BL$protein, df=5))#
+#
+plot(Milk.Lupins$Time, Milk.Lupins$protein, pch=20)#
+lines(smooth.spline(Milk.Lupins$Time, Milk.Lupins$protein, df=5))#
+#Q9 (uncompleted)#
+par(new=F)	#
+par(nfrow=c(3,1))#
+plot(Milk.Barley$Time, Milk.Barley$protein, pch=20)#
+lines(smooth.spline(Milk.Barley$Time, Milk.Barley$protein, df=5))#
+#
+plot(Milk.BL$Time, Milk.BL$protein, pch=20)#
+lines(smooth.spline(Milk.BL$Time, Milk.BL$protein, df=5))#
+#
+plot(Milk.Lupins$Time, Milk.Lupins$protein, pch=20)#
+lines(smooth.spline(Milk.Lupins$Time, Milk.Lupins$protein, df=5))#
+par(new=T)	# carried over - only need to set once for the current workspace#
+par(nfrow=c(3,1))#
+par(mfrow=c(3,1))#
+plot(Milk.Barley$Time, Milk.Barley$protein, pch=20)#
+lines(smooth.spline(Milk.Barley$Time, Milk.Barley$protein, df=5))#
+#
+plot(Milk.BL$Time, Milk.BL$protein, pch=20)#
+lines(smooth.spline(Milk.BL$Time, Milk.BL$protein, df=5))#
+#
+plot(Milk.Lupins$Time, Milk.Lupins$protein, pch=20)#
+lines(smooth.spline(Milk.Lupins$Time, Milk.Lupins$protein, df=5))#
+plot(Milk.Lupins$Time, Milk.Lupins$protein, pch=20)#
+lines(smooth.spline(Milk.Lupins$Time, Milk.Lupins$protein, df=5))#
+cow.lmfit <- lm(protein~Diet, data=Milk)#
+summary(cow.lmfit)#
+library(nlme)#
+exp(0.0879-1.96*0.0265)#
+exp(0.0879+1.96*0.0265)#
+#
+exp(0.0636-1.96*0.0364)#
+exp(0.0636+1.96*0.0364)#
+#
+exp(0.2045-1.96*0.0405)#
+exp(0.2045+1.96*0.0405)#
+#
+exp(-0.0363528294657983-1.96*0.0797)#
+#
+#
+exp(-0.0363528294657983+1.96*0.0797)#
+#
+#
+#
+exp(0.1111-1.96*0.0258)#
+exp(0.1111+1.96*0.0258)#
+#
+exp(0.1454-1.96*0.0302)#
+exp(0.1454+1.96*0.0302)#
+#
+exp(0.1029-1.96*0.0415)#
+exp(0.1029+1.96*0.0415)#
+#
+exp(0.0834903104990254-1.96*0.0658)#
+exp(0.0834903104990254+1.96*0.0658)#
+#
+exp(0.2433-1.96*0.0345)#
+exp(0.2433+1.96*0.0345)#
+#
+exp(0.0608-1.96*0.0845)#
+exp(0.0608+1.96*0.0845)#
+#
+exp(0.1433-1.96*0.0592)#
+exp(0.1433+1.96*0.0592)#
+#
+exp(0.175800339803689-1.96*0.089)#
+exp(0.175800339803689+1.96*0.089)#
+#
+install.packages("lattice")#
+install.packages("nlme")  #
+library (lattice)#
+library (nlme)#
+find("Spruce")#
+search()#
+Spruce#
+head(Spruce)#
+table(Spruce$plot)#
+table(Spruce$Tree)#
+#
+install.packages("latticeExtra")#
+install.packages("gridExtra")#
+#
+library(nlme)#
+library(lattice)#
+library(latticeExtra)#
+library(gridExtra)#
+xyplot(logSize~days,data=Spruce,groups=Tree,type="l",xlim=c(152,674),ylim=c(2,8),#
+subset=Spruce$days<260,main="Complete Data")+as.layer(xyplot(logSize~days,xlim=c(152,674),data=Spruce,groups=Tree,type="l",subset=Spruce$days>260))#
+xyplot(logSize~days,data=Spruce,groups=Tree,type="l",xlim=c(152,674),ylim=c(2,8),main="Complete Data")#
+xyplot(logSize~days,data=Spruce,groups=Tree,type="l",xlim=c(152,674),ylim=c(2,8), subset=Spruce$days<260,main="Complete Data")+as.layer(xyplot(logSize~days,xlim=c(152,674),data=Spruce,groups=Tree,type="l",subset=Spruce$days>260))#
+Spruce$treatment<-ifelse(Spruce$plot==1 | Spruce$plot==2,1,0)  #Treatment: 1-ozone, 0-control#
+Spruce$season<-ifelse(Spruce$plot==2 | Spruce$plot==4,1,0) #Season: 1-season2, 0-season1#
+table(Spruce$treatment, Spruce$season) # give counts of each diet level#
+group1 <- Spruce[Spruce$treatment==1 & Spruce$season==0,]  #
+group2 <- Spruce[Spruce$treatment==1 & Spruce$season==1,]  #
+group3 <- Spruce[Spruce$treatment==0 & Spruce$season==0,]  #
+group4 <- Spruce[Spruce$treatment==0 & Spruce$season==1,]  #
+plt1 <- xyplot(logSize~days,data=group1,groups=Tree,type="l",xlim=c(152,674),ylim=c(2,8), subset=Spruce$days<260,main="Complete Data")+as.layer(xyplot(logSize~days,xlim=c(152,674),data=group1,groups=Tree,type="l",subset=Spruce$days>260))#
+plt2 <- xyplot(logSize~days,data=group2,groups=Tree,type="l",xlim=c(152,674),ylim=c(2,8), subset=Spruce$days<260,main="Complete Data")+as.layer(xyplot(logSize~days,xlim=c(152,674),data=group2,groups=Tree,type="l",subset=Spruce$days>260))#
+plt3 <- xyplot(logSize~days,data=group3,groups=Tree,type="l",xlim=c(152,674),ylim=c(2,8), subset=Spruce$days<260,main="Complete Data")+as.layer(xyplot(logSize~days,xlim=c(152,674),data=group3,groups=Tree,type="l",subset=Spruce$days>260))#
+plt4 <- xyplot(logSize~days,data=group4,groups=Tree,type="l",xlim=c(152,674),ylim=c(2,8), subset=Spruce$days<260,main="Complete Data")+as.layer(xyplot(logSize~days,xlim=c(152,674),data=group4,groups=Tree,type="l",subset=Spruce$days>260))#
+grid.arrange(plt1,plt2,plt3,plt4,ncol=1,nrow=4)#
+grid.arrange(plt1,plt2,plt3,plt4,ncol=2,nrow=2)#
+plt1 <- xyplot(logSize~days,data=group1,groups=Tree,type="l",xlim=c(152,674),ylim=c(2,8), subset=Spruce$days<260,main="Ozone & Season 1")+as.layer(xyplot(logSize~days,xlim=c(152,674),data=group1,groups=Tree,type="l",subset=Spruce$days>260))#
+plt2 <- xyplot(logSize~days,data=group2,groups=Tree,type="l",xlim=c(152,674),ylim=c(2,8), subset=Spruce$days<260,main="Ozone & Season 2")+as.layer(xyplot(logSize~days,xlim=c(152,674),data=group2,groups=Tree,type="l",subset=Spruce$days>260))#
+plt3 <- xyplot(logSize~days,data=group3,groups=Tree,type="l",xlim=c(152,674),ylim=c(2,8), subset=Spruce$days<260,main="Control & Season 1")+as.layer(xyplot(logSize~days,xlim=c(152,674),data=group3,groups=Tree,type="l",subset=Spruce$days>260))#
+plt4 <- xyplot(logSize~days,data=group4,groups=Tree,type="l",xlim=c(152,674),ylim=c(2,8), subset=Spruce$days<260,main="Control & Season 2")+as.layer(xyplot(logSize~days,xlim=c(152,674),data=group4,groups=Tree,type="l",subset=Spruce$days>260))#
+grid.arrange(plt1,plt2,plt3,plt4,ncol=2,nrow=2)#
+boxplot(logSize~days,Spruce)#
+boxplot(logSize~days,Spruce,groups=Tree)#
+# Homework 1#
+# Ying Han#
+# 2014-9-21#
+#
+library(nlme)#
+library(lattice)#
+library(latticeExtra)#
+library(gridExtra)#
+#
+# Question 1#
+#
+# a#
+xyplot(logSize~days,data=Spruce,groups=Tree,type="l",xlim=c(152,674),ylim=c(2,8), subset=Spruce$days<260,main="Complete Data")+as.layer(xyplot(logSize~days,xlim=c(152,674),data=Spruce,groups=Tree,type="l",subset=Spruce$days>260))#
+#
+# b#
+Spruce$treatment<-ifelse(Spruce$plot==1 | Spruce$plot==2,1,0)  #Treatment: 1-ozone, 0-control#
+Spruce$season<-ifelse(Spruce$plot==2 | Spruce$plot==4,1,0) #Season: 1-season2, 0-season1#
+#
+table(Spruce$treatment, Spruce$season) # give counts of each level#
+#subset the dataset according to diet groups#
+group1 <- Spruce[Spruce$treatment==1 & Spruce$season==0,]  #
+group2 <- Spruce[Spruce$treatment==1 & Spruce$season==1,]  #
+group3 <- Spruce[Spruce$treatment==0 & Spruce$season==0,]  #
+group4 <- Spruce[Spruce$treatment==0 & Spruce$season==1,]  #
+#
+#creating plots by group#
+plt1 <- xyplot(logSize~days,data=group1,groups=Tree,type="l",xlim=c(152,674),ylim=c(2,8), subset=Spruce$days<260,main="Ozone & Season 1")+as.layer(xyplot(logSize~days,xlim=c(152,674),data=group1,groups=Tree,type="l",subset=Spruce$days>260))#
+plt2 <- xyplot(logSize~days,data=group2,groups=Tree,type="l",xlim=c(152,674),ylim=c(2,8), subset=Spruce$days<260,main="Ozone & Season 2")+as.layer(xyplot(logSize~days,xlim=c(152,674),data=group2,groups=Tree,type="l",subset=Spruce$days>260))#
+plt3 <- xyplot(logSize~days,data=group3,groups=Tree,type="l",xlim=c(152,674),ylim=c(2,8), subset=Spruce$days<260,main="Control & Season 1")+as.layer(xyplot(logSize~days,xlim=c(152,674),data=group3,groups=Tree,type="l",subset=Spruce$days>260))#
+plt4 <- xyplot(logSize~days,data=group4,groups=Tree,type="l",xlim=c(152,674),ylim=c(2,8), subset=Spruce$days<260,main="Control & Season 2")+as.layer(xyplot(logSize~days,xlim=c(152,674),data=group4,groups=Tree,type="l",subset=Spruce$days>260))#
+grid.arrange(plt1,plt2,plt3,plt4,ncol=2,nrow=2)#
+plt1 <- boxplot(logSize~days,group1)#
+plt1 <- xyplot(logSize~days,data=group1,groups=Tree,type="l",xlim=c(152,674),ylim=c(2,8), subset=Spruce$days<260,main="Ozone & Season 1")+as.layer(xyplot(logSize~days,xlim=c(152,674),data=group1,groups=Tree,type="l",subset=Spruce$days>260))#
+plt1#
+plt1#
+#
+boxplot(logSize~days,group1, xlab="days", ylab="logSize", main="Ozone & Season 1")#
+boxplot(logSize~days,group2, xlab="days", ylab="logSize", main="Ozone & Season 2")#
+boxplot(logSize~days,group3, xlab="days", ylab="logSize", main="Control & Season 1")#
+boxplot(logSize~days,group4, xlab="days", ylab="logSize", main="Control & Season 2")#
+table(Spruce$plot) # give counts of each level#
+table(Spruce$treatment, Spruce$season) # give counts of each level#
+# b#
+plt1 <- xyplot(logSize~days,data=Spruce[Spruce$plot==1,],groups=Tree,type="l",xlim=c(152,674),ylim=c(2,8), subset=Spruce$days<260,main="Ozone & Season 1")+as.layer(xyplot(logSize~days,xlim=c(152,674),data=Spruce[Spruce$plot==1,],groups=Tree,type="l",subset=Spruce$days>260))#
+plt2 <- xyplot(logSize~days,data=Spruce[Spruce$plot==2,],groups=Tree,type="l",xlim=c(152,674),ylim=c(2,8), subset=Spruce$days<260,main="Ozone & Season 2")+as.layer(xyplot(logSize~days,xlim=c(152,674),data=Spruce[Spruce$plot==2,],groups=Tree,type="l",subset=Spruce$days>260))#
+plt3 <- xyplot(logSize~days,data=Spruce[Spruce$plot==3,],groups=Tree,type="l",xlim=c(152,674),ylim=c(2,8), subset=Spruce$days<260,main="Control & Season 1")+as.layer(xyplot(logSize~days,xlim=c(152,674),data=Spruce[Spruce$plot==3,],groups=Tree,type="l",subset=Spruce$days>260))#
+plt4 <- xyplot(logSize~days,data=Spruce[Spruce$plot==4,],groups=Tree,type="l",xlim=c(152,674),ylim=c(2,8), subset=Spruce$days<260,main="Control & Season 2")+as.layer(xyplot(logSize~days,xlim=c(152,674),data=Spruce[Spruce$plot==4,],groups=Tree,type="l",subset=Spruce$days>260))#
+grid.arrange(plt1,plt2,plt3,plt4,ncol=2,nrow=2)#
+boxplot(logSize~plot,Spruce, xlab="groups", ylab="logSize")#
+plot(Spruce$logSize,Spruce$days,pch=20)#
+plot(Spruce$days, Spruce$logSize,pch=20)#
+par(new=T)#
+# option new is by default set to false, If set to TRUE, the next high-level plotting command should not clean the frame before drawing as if it were on a new panel; this command only needs to be defined once.#
+smooth.spline(Spruce$days, Spruce$logSize,df=5)#
+par(new=F)#
+plot(Spruce$days, Spruce$logSize, pch=20, xlab="days", ylab="logSize")#
+lines(smooth.spline(Spruce$days, Spruce$logSize,df=5))#
+plot(Spruce[Spruce$plot==1, ]$days, Spruce[Spruce$plot==1, ]$logSize, pch=20, xlab="days", ylab="logSize")#
+lines(smooth.spline(Spruce[Spruce$plot==1, ]$days, Spruce[Spruce$plot==1, ]$logSize,df=5))#
+par(mfrow=c(2,2)) #
+#
+plot(Spruce[Spruce$plot==1, ]$days, Spruce[Spruce$plot==1, ]$logSize, pch=20, xlab="days", ylab="logSize", main="Ozone & Season 1")#
+lines(smooth.spline(Spruce[Spruce$plot==1, ]$days, Spruce[Spruce$plot==1, ]$logSize,df=5))#
+#
+plot(Spruce[Spruce$plot==2, ]$days, Spruce[Spruce$plot==2, ]$logSize, pch=20, xlab="days", ylab="logSize", main="Ozone & Season 2")#
+lines(smooth.spline(Spruce[Spruce$plot==2, ]$days, Spruce[Spruce$plot==2, ]$logSize,df=5))#
+#
+plot(Spruce[Spruce$plot==3, ]$days, Spruce[Spruce$plot==3, ]$logSize, pch=20, xlab="days", ylab="logSize", main="Control & Season 1")#
+lines(smooth.spline(Spruce[Spruce$plot==3, ]$days, Spruce[Spruce$plot==3, ]$logSize,df=5))#
+#
+plot(Spruce[Spruce$plot==4, ]$days, Spruce[Spruce$plot==4, ]$logSize, pch=20, xlab="days", ylab="logSize", main="Control & Season 2")#
+lines(smooth.spline(Spruce[Spruce$plot==4, ]$days, Spruce[Spruce$plot==4, ]$logSize,df=5))#
+plot(c(1,19), c(2,5), xlim=c(1,19), ylim=c(2,5), col="white", main="Effect of diet on protein content", xlab="Time",ylab="Protein content")#
+#
+lines(smooth.spline(Milk.Barley$Time,Milk.Barley$protein,df=5), lty=4,col=4) #Blue#
+lines(smooth.spline(Milk.BL$Time,Milk.BL$protein,df=5), lty=6,col=6) #Pink#
+lines(smooth.spline(Milk.Lupins$Time,Milk.Lupins$protein,df=5), lty=1,col=1) #Green#
+legend("bottomright",c("Barley","Barley+lupins","lupins"),lty = c(4,6,1),col=c(4,6,1))#
+list()#
+plot(Spruce$days, Spruce$logSize, pch=20, xlab="days", ylab="logSize")#
+lines(smooth.spline(Spruce[Spruce$plot==1, ]$days, Spruce[Spruce$plot==1, ]$logSize,df=5), col="red")#
+lines(smooth.spline(Spruce[Spruce$plot==2, ]$days, Spruce[Spruce$plot==2, ]$logSize,df=5), col="orange")#
+lines(smooth.spline(Spruce[Spruce$plot==3, ]$days, Spruce[Spruce$plot==3, ]$logSize,df=5), col="green")#
+lines(smooth.spline(Spruce[Spruce$plot==4, ]$days, Spruce[Spruce$plot==4, ]$logSize,df=5), col="blue")#
+library(nlme)#
+library(lattice)#
+library(latticeExtra)#
+library(gridExtra)#
+#
+# Question 1#
+# Question 7#
+plot(Spruce$days, Spruce$logSize, pch=20, xlab="days", ylab="logSize")#
+lines(smooth.spline(Spruce[Spruce$plot==1, ]$days, Spruce[Spruce$plot==1, ]$logSize,df=5), col="red")#
+lines(smooth.spline(Spruce[Spruce$plot==2, ]$days, Spruce[Spruce$plot==2, ]$logSize,df=5), col="orange")#
+lines(smooth.spline(Spruce[Spruce$plot==3, ]$days, Spruce[Spruce$plot==3, ]$logSize,df=5), col="green")#
+lines(smooth.spline(Spruce[Spruce$plot==4, ]$days, Spruce[Spruce$plot==4, ]$logSize,df=5), col="blue")#
+legend("bottomright",c("Ozone & Season 1","Ozone & Season 2","Control & Season 1","Control & Season 2"),col=c("red","orange","green","blue"))#
+legend("bottomright",c("Ozone & Season 1","Ozone & Season 2","Control & Season 1","Control & Season 2"),lty=1,col=c("red","orange","green","blue"))#
+# Question 7#
+plot(Spruce$days, Spruce$logSize, pch=20, xlab="days", ylab="logSize")#
+lines(smooth.spline(Spruce[Spruce$plot==1, ]$days, Spruce[Spruce$plot==1, ]$logSize,df=5), col="red")#
+lines(smooth.spline(Spruce[Spruce$plot==2, ]$days, Spruce[Spruce$plot==2, ]$logSize,df=5), col="orange")#
+lines(smooth.spline(Spruce[Spruce$plot==3, ]$days, Spruce[Spruce$plot==3, ]$logSize,df=5), col="green")#
+lines(smooth.spline(Spruce[Spruce$plot==4, ]$days, Spruce[Spruce$plot==4, ]$logSize,df=5), col="blue")#
+legend("bottomright",c("Ozone & Season 1","Ozone & Season 2","Control & Season 1","Control & Season 2"),lty=1,col=c("red","orange","green","blue"))#
+days<-unique(Spruce$days)#
+Spruce$treatment<-ifelse(Spruce$plot==1 | Spruce$plot==2,1,0)  #Treatment: 1-ozone, 0-control#
+Spruce$season<-ifelse(Spruce$plot==2 | Spruce$plot==4,1,0) #Season: 1-season2, 0-season1#
+day<-unique(Spruce$days)#
+day<-unique(Spruce$days)#
+for(i in day){#
+	model.spruce<-lm(logSize~treatment+season,data=Spruce,subset=(day==i))#
+    print(paste("Day=",i,sep=""))#
+    print(summary(model.spruce))#
+    group2.coeff[i]<-summary(cow.blmfit)$coefficients[2,1] #
+    group3.coeff[i]<-summary(cow.blmfit)$coefficients[3,1] #
+    group4.coeff[i]<-summary(cow.blmfit)$coefficients[4,1] #
+}#
+#
+#
+#
+day<-unique(Spruce$days)#
+for(i in day){#
+	model.spruce<-lm(logSize~treatment+season,data=Spruce,subset=(day==i))#
+    print(paste("Day=",i,sep=""))#
+    print(summary(model.spruce))#
+    group2.coeff[i]<-summary(model.spruce)$coefficients[2,1] #
+    group3.coeff[i]<-summary(model.spruce)$coefficients[3,1] #
+    group4.coeff[i]<-summary(model.spruce)$coefficients[4,1] #
+}#
+day<-unique(Spruce$days)#
+group2.coeff <- rep(NA, length(day))#
+group3.coeff <- rep(NA, length(day))#
+group4.coeff <- rep(NA, length(day))#
+for(i in day){#
+	model.spruce<-lm(logSize~treatment+season,data=Spruce,subset=(day==i))#
+    print(paste("Day=",i,sep=""))#
+    print(summary(model.spruce))#
+    group2.coeff[i]<-summary(model.spruce)$coefficients[2,1] #
+    group3.coeff[i]<-summary(model.spruce)$coefficients[3,1] #
+    group4.coeff[i]<-summary(model.spruce)$coefficients[4,1] #
+}#
+model.spruce#
+day<-unique(Spruce$days)#
+treatment.coeff <- rep(NA, length(day))#
+season.coeff <- rep(NA, length(day))#
+for(i in day){#
+	model.spruce<-lm(logSize~treatment+season,data=Spruce,subset=(day==i))#
+    print(paste("Day=",i,sep=""))#
+    print(summary(model.spruce))#
+    treatment.coeff[i]<-summary(model.spruce)$coefficients[2,1] #
+    season.coeff[i]<-summary(model.spruce)$coefficients[3,1] #
+}#
+par(mfrow=c(2,1))#
+plot(day,treatment.coeff,pch=20,main="Treatment Effect (Ozone vs Control)",xlab="days",ylab="Coefficient")#
+plot(day, season.coeff,pch=20,main="Seasonal Effect (Season 2 vs Season 1)",xlab="days",ylab="Coefficient")#
+length(day)#
+#
+day<-unique(Spruce$days)#
+treatment.coeff <- rep(NA, length(day))#
+season.coeff <- rep(NA, length(day))#
+for(i in day){#
+	model.spruce<-lm(logSize~treatment+season,data=Spruce,subset=(day==i))#
+    print(paste("Day=",i,sep=""))#
+    print(summary(model.spruce))#
+    treatment.coeff[i]<-summary(model.spruce)$coefficients[2,1] #
+    season.coeff[i]<-summary(model.spruce)$coefficients[3,1] #
+}#
+length(treatment.coeff)#
+head(treatment.coeff)#
+treatment.coeff <- rep(NA, length(day))#
+#
+length(treatment.coeff)#
+#
+#
+day<-unique(Spruce$days)#
+treatment.coeff <- rep(NA, length(day))#
+season.coeff <- rep(NA, length(day))#
+for(i in day){#
+	model.spruce<-lm(logSize~treatment+season,data=Spruce,subset=(day==i))#
+    print(paste("Day=",i,sep=""))#
+    print(summary(model.spruce))#
+    treatment.coeff[which(day==i)]<-summary(model.spruce)$coefficients[2,1] #
+    season.coeff[which(day==i)]<-summary(model.spruce)$coefficients[3,1] #
+}#
+par(mfrow=c(2,1))#
+plot(day,treatment.coeff,pch=20,main="Treatment Effect (Ozone vs Control)",xlab="days",ylab="Coefficient")#
+plot(day,season.coeff,pch=20,main="Seasonal Effect (Season 2 vs Season 1)",xlab="days",ylab="Coefficient")#
+par(mfrow=c(2,1))#
+plot(day,treatment.coeff,pch=20,main="Treatment Effect (Ozone vs Control)",xlab="days",ylab="Coefficient")#
+plot(day,season.coeff,pch=20,main="Seasonal Effect (Season 2 vs Season 1)",xlab="days",ylab="Coefficient")#
+abline(v=0)#
+abline(h=0)#
+par(mfrow=c(2,1))#
+plot(day,exp(treatment.coeff),pch=20,main="Treatment Effect (Ozone vs Control)",xlab="days",ylab="Odds Ratio")#
+abline(h=1, lty="dashed",col="red")#
+plot(day,season.coeff,pch=20,main="Seasonal Effect (Season 2 vs Season 1)",xlab="days",ylab="Odds Ratio")#
+abline(h=1, lty="dashed",col="red")#
+par(mfrow=c(2,1))#
+plot(day,exp(treatment.coeff),pch=20,main="Treatment Effect (Ozone vs Control)",xlab="days",ylab="Odds Ratio")#
+abline(h=1, lty="dashed",col="red")#
+plot(day,exp(season.coeff),pch=20,main="Seasonal Effect (Season 2 vs Season 1)",xlab="days",ylab="Odds Ratio")#
+abline(h=1, lty="dashed",col="red")#
+#8#
+day<-unique(Spruce$days)#
+day#
+treatment <- rep(NA,13)#
+season <- rep(NA,13)#
+#
+for (i in day){#
+#
+model.spruce<-glm(logSize.binary~treatment+season,data=Spruce,family=binomial,subset=days==i)#
+#
+j<-which(day==i)#
+treatment[j] <-exp(summary(model.spruce)$coefficients[2,1])#
+season[j]<-exp(summary(model.spruce)$coefficients[3,1])#
+print(paste("Day=",i,sep=""))#
+print(summary(model.spruce))#
+}#
+#
+par(mfrow=c(2,1))#
+#
+plot(day,treatment,pch=20,main="Treatment Effect (Ozone vs control)",#
+xlab="Time in days since 1 January 1988",ylab="Odds Ratio")#
+#
+plot(day,season,pch=20,main="Season Effect (Season 2 vs 1)",#
+xlab="Time in days since 1 January 1988",ylab="Odds Ratio")#
+#abline(a=1, b=0)#
+day#
+par(mfrow=c(2,1))#
+plot(day,treatment.coeff,pch=20,main="Treatment Effect (Ozone vs Control)",xlab="days",ylab="Coefficient")#
+abline(h=1, lty="dashed",col="red")#
+plot(day,season.coeff,pch=20,main="Seasonal Effect (Season 2 vs Season 1)",xlab="days",ylab="Coefficient")#
+abline(h=1, lty="dashed",col="red")#
+par(mfrow=c(2,1))#
+plot(day,treatment.coeff,pch=20,main="Treatment Effect (Ozone vs Control)",xlab="days",ylab="Coefficient")#
+abline(h=0, lty="dashed",col="red")#
+plot(day,season.coeff,pch=20,main="Seasonal Effect (Season 2 vs Season 1)",xlab="days",ylab="Coefficient")#
+abline(h=0, lty="dashed",col="red")#
+int.coeff <- rep(NA, length(day))#
+for(i in day){#
+	model.spruce<-lm(logSize~treatment+season+treatment*season,data=Spruce,subset=(day==i))#
+    print(paste("Day=",i,sep=""))#
+    print(summary(model.spruce))#
+    int.coeff[which(day==i)]<-summary(model.spruce)$coefficients[4,1] #
+}#
+plot(day,int.coeff,pch=20,main="Interaction Effect (Treatment x Season)",xlab="days",ylab="Coefficient")#
+#
+# Question 10#
+int.coeff <- rep(NA, length(day))#
+for(i in day){#
+	model.spruce<-lm(logSize~treatment+season+treatment*season,data=Spruce,subset=(day==i))#
+    print(paste("Day=",i,sep=""))#
+    print(summary(model.spruce))#
+    int.coeff[which(day==i)]<-summary(model.spruce)$coefficients[4,1] #
+}#
+#
+plot(day,int.coeff,pch=20,main="Interaction Effect (Treatment x Season)",xlab="days",ylab="Coefficient")#
+abline(h=0, lty="dashed",col="red")#
+model.spruce<-lm(logSize~treatment+season,data=Spruce)  #
+summary(model.spruce)  #summary produces the results of lm#
+model.spruce<-lm(logSize~treatment+season+treatment*season,data=Spruce)  #
+summary(model.spruce) #
+range(Spruce$logSize)#
+1.1^10#
+1.1^7#
+fix(Orange)#
+rm(list=ls())#
+#1#
+install.packages("gstat")  #gstat package includes variogram modelling#
+#
+library(nlme)#
+library(lattice)#
+library(gstat)#
+library(gridExtra)  #
+#
+Milk[1:5,]#
+Milk.Barley<-Milk[Milk$Diet=="barley",]   # subsetting the Barley diet subgroup#
+Milk.BL<-Milk[Milk$Diet=="barley+lupins",]  # subsetting the Mixed diet subgroup#
+Milk.Lupins<-Milk[Milk$Diet=="lupins",]   # subsetting the Lupins diet subgroup#
+#
+#a#
+plot(Milk$Time,Milk$protein,pch=20) #scatterplot#
+xyplot(protein~Time,data=Milk,groups=Cow,type="l") #Spaghetti plot#
+#
+#b#
+par(mfrow=c(3,1))#
+plot(Milk.Barley$Time,Milk.Barley$protein,pch=20)#
+plot(Milk.BL$Time,Milk.BL$protein,pch=20)#
+plot(Milk.Lupins$Time,Milk.Lupins$protein,pch=20)#
+#
+ plt1<-xyplot(protein~Time,Milk.Barley,groups=Cow,type="l") #
+ plt2<-xyplot(protein~Time,Milk.BL,groups=Cow,type="l")#
+ plt3<-xyplot(protein~Time,Milk.Lupins,groups=Cow,type="l")#
+#
+print(plt1, position=c(0, .6, 1, 1), more=TRUE)#
+print(plt2, position=c(0, .3, 1, .7),more=TRUE)#
+print(plt3, position=c(0, 0, 1, .4))#
+#
+#can also use: grid.arrange(plt1, plt2, plt3, ncol=1, nrow=3) #
+#
+#2#
+# Lowess: A weighted least-square line is fitted in a window, the observations close#
+# to the line is given more weights. This results in a line that's insensitive to the outliers#
+#
+#a#
+plot(Milk$Time,Milk$protein,pch=20)#
+for(i in 1:3){#
+span=c(0.2,0.5,0.8) #span: percentage of cases across the range of X#
+color=c("blue","red","darkgreen")#
+lines(lowess(Milk$Time,Milk$protein,f=span[i]), col=color[i])#
+legend(7.5, 4.7, #specify the position of the legend#
+ c("span=0.2","span=0.5","span=0.8"), lty=c(1,1,1), col=c(4,2,1))#
+} #
+# The larger the span, the smoother the curve is#
+#
+#b#
+par(mfrow=c(3,1))#
+#
+plot(Milk.Barley$Time,Milk.Barley$protein,pch=20)#
+for(i in 1:3){#
+span=c(0.2,0.5,0.8)#
+color=c("blue","red","darkgreen")#
+lines(lowess(Milk.Barley$Time,Milk.Barley$protein,f=span[i]), col=color[i]) # f specify the smoother span#
+}#
+#
+plot(Milk.BL$Time,Milk.BL$protein,pch=20)#
+for(i in 1:3){#
+span=c(0.2,0.5,0.8)#
+color=c("blue","red","darkgreen")#
+lines(lowess(Milk.BL$Time,Milk.BL$protein,f=span[i]), col=color[i])#
+}#
+#
+plot(Milk.Lupins$Time,Milk.Lupins$protein,pch=20)#
+for(i in 1:3){#
+span=c(0.2,0.5,0.8)#
+color=c("blue","red","darkgreen")#
+lines(lowess(Milk.Lupins$Time,Milk.Lupins$protein,f=span[i]), col=color[i])#
+}#
+#
+#4#
+#a#
+par(mfrow=c(3,1))#
+plot(Milk$Time,Milk$protein,pch=20,main="bandwidth=.8")#
+lines(ksmooth(Milk$Time,Milk$protein,bandwidth=.8), col="blue",lwd=2)  #lwd specifies the line width#
+#
+plot(Milk$Time,Milk$protein,pch=20,main="bandwidth=2")#
+lines(ksmooth(Milk$Time,Milk$protein,bandwidth=2), col="red",lwd=2)#
+#
+plot(Milk$Time,Milk$protein,pch=20,main="bandwidth=3.2")#
+lines(ksmooth(Milk$Time,Milk$protein, bandwidth=3.2), col="darkgreen",lwd=2)#
+#
+#5#
+#Compare the lowess with span=.8 to Kernel smoother with bandwidth=8, they are quite similar#
+plot(Milk$Time,Milk$protein,pch=20)#
+lines(lowess(Milk$Time,Milk$protein,f=.8), col="blue", lwd=2)#
+lines(ksmooth(Milk$Time,Milk$protein,bandwidth=8), col="red", lwd=2)#
+legend(7.5, 4.7, #specify the position of the legend#
+ c("lowess: span=.8","ksmooth: bandwidth=8"), lty=c(1,1), col=c(4,2))#
+} #
+#
+#
+#6#
+Milk.N<-length(unique(Milk$Cow))#
+Milk.n<-round(Milk.N*0.2)  # round it to 20%, Milk.n=16#
+#
+#vector doesn't have column name, so create dataframe to assign column name#
+#sample(): takes a sample of the specified size from the elements of x using either#
+#with or without replacement#
+#
+Milk.subid<-data.frame(sample(unique(Milk$Cow),size=Milk.n))  #Randomly select 16 unique cow ID#
+Milk.subid#
+colnames(Milk.subid)<-c("Cow") # Assign the column name "Cow" to the Milk.subid#
+Milk.sub<-merge(Milk.subid,Milk) #merge Milk and Milk.subid by "Cow"#
+#merge():  By default the data frames are merged on the columns with names they both have#
+length(unique(Milk.sub$Cow))#
+sorted.sub<-Milk.sub[order(Milk.sub$Time),]  #sort by time#
+sorted.sub#
+#
+#order(): returns the index of Milk.sub$Time after sorting#
+# e.g: #
+#x=c(2,6,4)#
+#index=order(x)#
+#x[index]#
+#
+plot(Milk.sub$Time,Milk.sub$protein,pch=20)#
+lines(lowess(Milk.sub$Time,Milk.sub$protein,f=0.5), col="blue")#
+#
+xyplot(protein~Time,data=sorted.sub,groups=Cow,type="l")  #the Entire dataset#
+#
+barley.sub<-sorted.sub[sorted.sub$Diet=="barley",] #By subgroups#
+bl.sub<-sorted.sub[sorted.sub$Diet=="barley+lupins",]#
+lupins.sub<-sorted.sub[sorted.sub$Diet=="lupins",]#
+#
+sub1<-xyplot(barley.sub$protein~barley.sub$Time,data=barley.sub,groups=Cow,type="l")#
+sub2<-xyplot(bl.sub$protein~bl.sub$Time,data=bl.sub,groups=Cow,type="l")#
+sub3<-xyplot(lupins.sub$protein~lupins.sub$Time,data=lupins.sub,groups=Cow,type="l")#
+grid.arrange(sub1, sub2, sub3, nrow=3, ncol=1)#
+#
+#7#
+plot(Milk$Time,Milk$protein,pch=20)#
+lines(lowess(Milk$Time,Milk$protein,f=0.5), col="blue")#
+lines(lowess(Milk.sub$Time,Milk.sub$protein,f=0.5), col="red",lty=2)#
+legend(7.5, 4.7,c("Complete data","Subset"),lty = c(1,2),col=c("blue","red"))#
+#
+#8#
+Milk.t1<-subset(Milk,Milk$Time==1)  #Retrieve data at Time=1#
+quantile(Milk.t1$protein)  #Compute quantiles of protein#
+#0%   25%   50%   75%  100% #
+#2.690 3.525 3.900 4.140 4.590#
+#
+sorted.Milk.t1<-Milk.t1[order(Milk.t1$protein),] #
+sorted.Milk.t1[,c("Cow","protein")]#
+#Pick out the cows corresponding to the selected quantiles#
+Milk.quant<-subset(Milk,Milk$Cow %in% c("L21","B21","B14","BL09","BL04"))#
+xyplot(protein~Time,data=Milk.quant,groups=Cow,type="l")#
+#
+#10#
+model.Milk<-lm(protein~Time,data=Milk)#
+Milk.resid<-data.frame(as.vector(resid(model.Milk)))  #1. obtain the residuals #
+#as.vector: coerce resid(model.Milk) to be a vector #
+#
+colnames(Milk.resid)<-"resid"#
+Milk.zap<-cbind(Milk,Milk.resid)  #cbind: combine R objects by rows or columns#
+cow.name<-as.vector(unique(Milk.zap$Cow)) #2.Get unique IDs for each cow #
+q<-rep(NA,79) #
+for(i in 1:79){   #3. Use "for" loop to compute medians of residuals for each cow#
+Milk.cow<-subset(Milk.zap,Milk.zap$Cow==cow.name[i]) #
+q[i]<-median(Milk.cow$resid) #save the median of residuals for each cow#
+}#
+#
+Milk.q<-data.frame(cow.name,q)  #
+sorted.Milk.zap<-Milk.q[order(Milk.q$q),] #4. Order the independent unit by q #
+quantile(sorted.Milk.zap$q) #5. Compute quantiles based on q#
+zap.final<-subset(Milk,Milk$Cow %in% c("L16","L04","B21","BL17","B01")) #6. Subset to get a new data frame with the above cows#
+xyplot(protein~Time,data=zap.final,groups=Cow,type="l", main="ZAP plot") #7. Create line plots#
+#
+#11#
+#
+plt1<-xyplot(protein~Time,data=Milk.quant,groups=Cow,type="l",main="Protein Quantile")#
+plt2<-xyplot(protein~Time,data=zap.final,groups=Cow,type="l",main="ZAP plot")#
+#
+print(plt1, position=c(0, .5, 1, 1), more=TRUE)#
+print(plt2, position=c(0, 0, 1, .5))#
+#
+lmfit<-lm(protein~Time+Diet,data=Milk)#
+Pred.lmfit<-predict.lm(lmfit)  #predict.lm provides predicted values from linear models#
+Res.lmfit<-Milk$protein - Pred.lmfit  #obtain the residuals#
+ext<-cbind(Milk,Res.lmfit)  #cbind: combine R objects by columns#
+res<-ext[,-1]    #Delete the first column , you may not need it for your h#
+res.wide<-reshape(res,v.names="Res.lmfit",timevar="Time",idvar="Cow", direction="wide")  #
+fix(res.wide)#
+#change long format to wide format#
+#
+pairs(res.wide[,3:10], upper.panel=NULL, main="Scatterplot Matrix of Residuals") #
+ # upper.panel=NULL:  only shows the lower panel#
+#
+## Use cor function to calculate correlation #
+corr<-cor(res.wide[,3:10], use="pairwise.complete.obs")#
+fix(corr)#
+# use= "pairwise.complete.obs": the correlation or covariance between each pair of variables #
+#is computed using all complete pairs of observations on those variables.#
+##Get the dataset ready for Variogram#
+#
+#Create your own new milk dataset that has new diet and cow variable (you need to do this in hw2)#
+#Create new diet variable so that diet=1 corresponds to Diet="Barley"...#
+ #
+  Milk$diet =Milk$Diet#
+  levels(Milk$diet)=c(1, 2, 3)#
+##ceate a new variable "cow" so that cow=1 corresponds to Cow=B01...#
+  length(unique(Milk$Cow))#
+  Milk$cow =Milk$Cow#
+  levels(Milk$cow)=c(1:79)#
+    #
+fix(Milk)#
+#
+milk<-subset(Milk, select = -c(Diet, Cow,diet1))  #delete the original Milk and Cow variables#
+fix(milk)#
+milk<-subset(Milk, select = -c(Diet, Cow,diet1))  #delete the original Milk and Cow variables#
+head(Milk)#
+milk<-subset(Milk, select = -c(Diet, Cow,diet))  #delete the original Milk and Cow variables#
+fix(milk)#
+#Lag: number of lags#
+#
+attach(milk) #Attach Set of R objects to search path, so that next time when using the variable in milk#
+#dataset, don't need to write milk$xxx#
+data=milk#
+id=cow#
+time=Time#
+y=protein#
+group=diet#
+p=3 # number of groups#
+lag=18#
+ variogram(milk,cow,Time,protein,diet,3,18)#
+variogram<-function(data,id,time,y,group,p,lag) #
+{   #
+	m <- as.numeric(max(id))  # no. of individuals#
+	n <- max(time) # no. of distinct time point#
+#
+#
+	##Change the long format to wide format#
+	#
+         YMatrix<-reshape(milk,v.names="protein",timevar="Time",idvar="cow", direction="wide")#
+         YMatrix<-YMatrix[,-c(1:2)]#
+ #
+	fix(YMatrix)#
+	# Take a look at the data, be aware that some individuals does not have n observations #
+#
+#
+	## Calculating Residual#
+#
+	#Create a mXn matrix called "resids" that would contain residuals#
+	resids <- matrix(rep(NA, m*n), nrow=m, dimnames=list(1:m, 1:n))  #
+#
+	#Create a function "FUN" to calculate mean#
+#
+#
+		groups <- numeric(0) #Find out where is the last row for each group#
+	for(i in 1:p)#
+	{#
+		groups <- c(groups, max(id[group==i]))  #e.g. id[group==1] returns all IDs for Barley diet group#
+	}#
+#
+	## first 25 cows on diet 1#
+	## next 27 cows on diet 2#
+	## last 27 cows on diet 3	#
+	#
+	#For each level of the group variable, calculate the mean #
+	#
+	for(i in 1:p)  #p is the level of diet, which is 3#
+	{		#
+		index <- sum(1, groups[i-1]):groups[i]  #
+		#index is a vector starts from 1+group[i-1] and continue to group[i] for each i, e.g. index=c(1:25) for i=1#
+		#
+		hat <- apply(YMatrix[index,], 2, mean, na.rm=T) #Calculate the mean of each time point for corresponding group level#
+	#
+		#
+		resids[index,] <- t(t(YMatrix[index,])-hat)  # t(): matrix transpose#
+		#
+	}#
+#
+	##Calculating Sample Variogram#
+	Variogram <- num <- numeric(lag)  #
+	for(j in 2:n)#
+	{#
+	    # See lecture notes slide 50 for the formula of sample variogram#
+	    #
+		v <- 0.5*(resids[,j:n]-resids[,1:(n+1-j)])^2 	# calculate v for all lags=1,2,...,18#
+		#
+		#sum non-missing v, otherwise R will return NA for the sum#
+		num[j-1] <- sum(v, na.rm=T) #
+		#
+	    # Take the average of all variogram corresponds to each lag u #
+	    # (the formula in slide page 50 is the variogram for each individual)#
+		Variogram[j-1] <- mean(v, na.rm=T) #
+#
+	}#
+#
+	Variogram#
+	#
+	#sigma square hat is simply the variance of residuals#
+#
+	vresid<-as.vector(resids)#
+    sigma2hatE=var(vresid, na.rm=T)#
+#
+	##Sample Variogram Plot#
+	u <- 1:lag#
+	plot(u, Variogram, main="Sample Variogram", #
+	type="l", ylim=c(0, 0.15), xlim=c(0,lag), col="blue")#
+	abline(a=sigma2hatE, b=0) #reference line: total variance#
+#
+	#Compute ACF#
+	rhoHat <- 1 - Variogram/sigma2hatE  #See lecture 4 notes slide 50 for the formula of ACF#
+#
+	c(Variogram,rhoHat)#
+} #
+#
+#Store values for Variogram to object "Variogram"#
+Variog<-variogram(milk,cow,Time,protein,diet,3,18)#
+#
+#Store values for ACF to object "rhohat"#
+rhohat<-variogram(milk,cow,Time,protein,diet,3,18)[19:36]#
+#
+#Print Variogram#
+Variog#
+#Print ACF#
+rhohat#
+library(gstat)#
+d <- read.table("~/Courses/Algorithms (Coursera)/HW1/IntegerArray.txt",header=F)#
+dim(d)#
+head(d)#
+d <- read.table("~/Courses/Algorithms (Coursera)/HW1/IntegerArray.txt",header=F)[,1]#
+length(d)/8#
+length(d)/32#
+#
+length(d)/32/5#
+#
+#
+sort(0)#
+sort()#
+#
+sort#
+#
+# divide and conquer #
+MergeAndCount <- function(a,b){#
+	m <- c()#
+	i <- 1#
+	j <- 1#
+	NumInv <- 0#
+	for(k in 1:length(c(a,b))){#
+		if(a[i] <= b[j]){#
+			m[k] <- a[i]#
+			i <- i + 1#
+		}else{#
+			m[k] <- b[j]#
+			j <- j + 1#
+			NumInv <- NumInv + (length(a) - i + 1)#
+		}#
+	}#
+	return(list(m, NumInv))#
+}#
+#
+# sort#
+SortAndCount <- function(x){#
+	NumInv <- 0#
+	for(i in 1:length(x)){#
+		for(j in (i+1):length(x)){#
+			if(x[i] <= x[j]){#
+				next#
+			}else{#
+				NumInv <- NumInv + 1#
+			}#
+		}#
+	}	#
+	y <- sort(x)#
+	return(list(y, NumInv))#
+}#
+#
+# Sort only#
+SortAndCount(d)$NumInv#
+d[1:10]#
+# sort#
+SortAndCount <- function(x){#
+	NumInv <- 0#
+	for(i in 1:(length(x)-1)){#
+		for(j in (i+1):length(x)){#
+			if(x[i] <= x[j]){#
+				next#
+			}else{#
+				NumInv <- NumInv + 1#
+			}#
+		}#
+	}	#
+	y <- sort(x)#
+	return(list(y, NumInv))#
+}#
+# sort#
+SortAndCount <- function(x){#
+	NumInv <- 0#
+	for(i in 1:(length(x)-1)){#
+		for(j in (i+1):length(x)){#
+			if(x[i] > x[j]) NumInv <- NumInv + 1#
+		}#
+	}	#
+	y <- sort(x)#
+	return(list(y, NumInv))#
+}#
+d{1:10]#
+d[1:10]#
+#
+SortAndCount <- function(x){#
+	NumInv <- 0#
+	for(i in 1:(length(x)-1)){#
+		for(j in (i+1):length(x)){#
+			if(x[i] > x[j]){#
+				print(c(x[i],x[j]))#
+				NumInv <- NumInv + 1#
+			}#
+		}#
+	}	#
+	y <- sort(x)#
+	return(list(y, NumInv))#
+}#
+SortAndCount(d[1:10])#
+length(d)/32#
+t <- SortAndCount(d)#
+# sort#
+SortAndCount <- function(x){#
+	NumInv <- 0#
+	for(i in 1:(length(x)-1)){#
+		for(j in (i+1):length(x)){#
+			if(x[i] > x[j]){#
+				#print(c(x[i],x[j]))#
+				NumInv <- NumInv + 1#
+			}#
+		}#
+	}	#
+	y <- sort(x)#
+	return(list(y, NumInv))#
+}#
+#
+# Sort only#
+t <- SortAndCount(d)#
+count <- 0#
+d2 <- d#
+s <- 3125#
+i=5#
+	temp <- c()#
+j=0#
+		l <- SortAndCount(d2[(j*s+1):((j+1)*s)])#
+		temp <- c(temp, l[[1]])#
+		count <- count + l[[2]]#
+head(temp)#
+((2^i)-1)#
+j=31#
+(j*s+1)#
+((j+1)*s)#
+0%/%2#
+1%/%2#
+#
+1%%2#
+#
+#
+5%%2#
+#
+#
+#
+4%%2#
+#
+#
+#
+#
+#
+d <- read.table("~/Courses/Algorithms (Coursera)/HW1/IntegerArray.txt", header=F)[,1]#
+#
+# divide and conquer #
+MergeAndCount <- function(a,b){#
+	m <- c()#
+	i <- 1#
+	j <- 1#
+	NumInv <- 0#
+	for(k in 1:length(c(a,b))){#
+		if(a[i] <= b[j]){#
+			m[k] <- a[i]#
+			i <- i + 1#
+		}else{#
+			m[k] <- b[j]#
+			j <- j + 1#
+			NumInv <- NumInv + (length(a) - i + 1)#
+		}#
+	}#
+	return(list(m, NumInv))#
+}#
+#
+# sort#
+SortAndCount <- function(x){#
+	NumInv <- 0#
+	for(i in 1:(length(x)-1)){#
+		for(j in (i+1):length(x)){#
+			if(x[i] > x[j]){#
+				#print(c(x[i],x[j]))#
+				NumInv <- NumInv + 1#
+			}#
+		}#
+	}	#
+	y <- sort(x)#
+	return(list(y, NumInv))#
+}#
+#
+# Divide and conquer#
+count <- 0#
+d2 <- d#
+s <- 3125#
+for(i in 5:1){#
+	temp <- c()	#
+	if(i==5){#
+		for(j in 0:((2^i)-1)){#
+			if(j%%2==0){#
+				l1 <- SortAndCount(d2[(j*s+1):((j+1)*s)])#
+				count <- count + l1[[2]]#
+			}else if(j%%2==1){#
+				l2 <- SortAndCount(d2[(j*s+1):((j+1)*s)])#
+				count <- count + l2[[2]]#
+				m <- MergeAndCount(l1[[1]], l2[[1]])#
+				temp <- c(temp, m[[1]])#
+				count <- count + m[[2]]#
+			}#
+		}#
+	}else{#
+		for(j in 0:((2^i)-1)){#
+			if(j%%2==0){#
+				l1 <- d2[(j*s+1):((j+1)*s)]#
+			}else if(j%%2==1){#
+				l2 <- d2[(j*s+1):((j+1)*s)]#
+				m <- MergeAndCount(l1, l2)#
+				temp <- c(temp, m[[1]])#
+				count <- count + m[[2]]#
+			}#
+		}		#
+	}#
+	d2 <- temp#
+	s <- s*2#
+}#
+# divide and conquer #
+MergeAndCount <- function(a,b){#
+	m <- c()#
+	i <- 1#
+	j <- 1#
+	NumInv <- 0#
+	for(k in 1:length(c(a,b))){#
+		if(i>length(a)){#
+			m[k] <- b[j]#
+			j <- j + 1#
+			next#
+		}#
+		if(j>length(b)){#
+			m[k] <- a[i]#
+			i <- i + 1#
+			next#
+		}#
+		if(a[i] <= b[j]){#
+			m[k] <- a[i]#
+			i <- i + 1#
+		}else{#
+			m[k] <- b[j]#
+			NumInv <- NumInv + (length(a) - i + 1)#
+			j <- j + 1#
+		}#
+	}#
+	return(list(m, NumInv))#
+}#
+# Divide and conquer#
+count <- 0#
+d2 <- d#
+s <- 3125#
+for(i in 5:1){#
+	temp <- c()	#
+	if(i==5){#
+		for(j in 0:((2^i)-1)){#
+			if(j%%2==0){#
+				l1 <- SortAndCount(d2[(j*s+1):((j+1)*s)])#
+				count <- count + l1[[2]]#
+			}else if(j%%2==1){#
+				l2 <- SortAndCount(d2[(j*s+1):((j+1)*s)])#
+				count <- count + l2[[2]]#
+				m <- MergeAndCount(l1[[1]], l2[[1]])#
+				temp <- c(temp, m[[1]])#
+				count <- count + m[[2]]#
+			}#
+		}#
+	}else{#
+		for(j in 0:((2^i)-1)){#
+			if(j%%2==0){#
+				l1 <- d2[(j*s+1):((j+1)*s)]#
+			}else if(j%%2==1){#
+				l2 <- d2[(j*s+1):((j+1)*s)]#
+				m <- MergeAndCount(l1, l2)#
+				temp <- c(temp, m[[1]])#
+				count <- count + m[[2]]#
+			}#
+		}		#
+	}#
+	d2 <- temp#
+	s <- s*2#
+}#
+count#
+t <- rbind(t, summary(try(glm(paste("PHENOTYPE", paste(c(covar, "rs76595456"), collapse="+"), sep="~"), data=d[!is.na(d$Y21),], family=binomial(link='logit')), silent=T))["rs76595456",])#
+# 6) carrying risk allele of rs114798100 only#
+d$rs114798100ONLY <- ifelse(d$rs114798100<2&d$rs111906932==2&d$rs76595456==2, 1, 0)#
+# 7) carrying risk allele of rs111906932 only#
+d$rs111906932ONLY <- ifelse(d$rs114798100==2&d$rs111906932<2&d$rs76595456==2, 1, 0)#
+# 8) carrying risk allele of rs114798100 and rs111906932 only#
+d$rs114798100ANDrs111906932 <- ifelse(d$rs114798100<2&d$rs111906932<2&d$rs76595456<2, 1, 0)#
+29+24+1077+597 #
+1727/(9641*2)#
+d <- read.table("~/Courses/Algorithms (Coursera)/HW2/QuickSort.txt", header=F)[,1]#
+length(d)#
+no#
+log(1.2)#
+exp(0.4)#
+library(AppliedPredictiveModeling)#
+data(segmentationOriginal)#
+library(caret)#
+dim(segmentationOriginal)#
+head(segmentationOriginal$Case)#
+train <- segmentationOriginal[segmentationOriginal$Case=="Train",]#
+test <- segmentationOriginal[segmentationOriginal$Case=="Test",]#
+dim(train)#
+dim(test)#
+head(segmentationOriginal$CART)#
+#
+colnames(segmentationOriginal)#
+train(Class~. data=train[,-2], method="rpart")#
+train(Class~., data=train[,-2], method="rpart")#
+fit <- train(Class~., data=train[,-2], method="rpart")#
+str(fit)#
+install.packages("pgmm")#
+library(pgmm)#
+data(olive)#
+olive = olive[,-1]#
+Fit <- train(Area~., data=olive, method="rpart")#
+newdata = as.data.frame(t(colMeans(olive)))#
+predict(Fit, data=newdata)#
+predict(Fit, newdata)#
+dim(newdata)#
+newdata#
+head(olive)#
+Fit$finalModel#
+olive$Area#
+library(ElemStatLearn)#
+install.packages("ElemStatLearn")#
+data(SAheart)#
+set.seed(8484)#
+train = sample(1:dim(SAheart)[1],size=dim(SAheart)[1]/2,replace=F)#
+trainSA = SAheart[train,]#
+testSA = SAheart[-train,]#
+library(ElemStatLearn)#
+data(SAheart)#
+set.seed(8484)#
+train = sample(1:dim(SAheart)[1],size=dim(SAheart)[1]/2,replace=F)#
+trainSA = SAheart[train,]#
+testSA = SAheart[-train,]#
+dim(trainSA)#
+head(trainSA)#
+set.seed(13234)#
+fit <- train(chd~age+alcohol+obesity+tobacco+typea+ldl, method="glm", family="binomial")#
+fit <- train(chd~age+alcohol+obesity+tobacco+typea+ldl, data=trainSA, method="glm", family="binomial")#
+prediction <- predict(fit, testSA)#
+head(prediction)#
+missClass = function(values,prediction){sum(((prediction > 0.5)*1) != values)/length(values)}#
+missClass(testSA$chd, prediction)#
+missClass(testSA$chd, predict(fit, testSA))#
+missClass(trainSA$chd, predict(fit, trainSA))#
+library(ElemStatLearn)#
+data(vowel.train)#
+data(vowel.test) #
+vowel.train$y <- as.factor(vowel.train$y)#
+vowel.test$y <- as.factor(vowel.test$y)#
+set.seed(33833)#
+fit <- train(y~., data=vowel.train, method="rf")#
+#
+#
+fit#
+fit$finalModel#
+varImp(fit)#
+set.seed(33833)#
+fit <- train(y~., data=vowel.train, method="rf")#
+varImp(fit)#
+phyper(87, 3267, 82982-3267, 101)#
+phyper(87, 3267, 82982-3267, 101, lower.tail=F)#
+#
+phyper(86, 3267, 82982-3267, 101, lower.tail=F)#
+#
+#
+phyper(152, 102735, 721371-102735, 666, lower.tail=F)#
+#
+#
+#
+phyper(151, 102735, 721371-102735, 666, lower.tail=F)#
+#
+#
+#
+#
+d <- read.table("/Users/Serena/Lab/8q24/AAPC/100_SNPdata.txt", header=F, stringsAsFactors=F)#
+head(d)#
+d <- read.table("/Users/Serena/Lab/8q24/AAPC/100_SNPdata.txt", header=T, stringsAsFactors=F)#
+dim(d)#
+str#
+rbinom(10,2,0.6)#
+rnorm(10, 0.6, 1)#
+#
+b=rnorm(10, 0.6, 1)#
+c <- b#
+c <- ifelse(c>0.6+1, 2, c)#
+c <- b#
+#
+c <- ifelse(b>0.6+1, 2, c)#
+#
+c <- ifelse(b<0.6-1, 0, c)#
+#
+#
+c <- ifelse(!(b<0.6-1) & !(b>0.6+1), 1, c)#
+#
+#
+#
+c#
+a <- rbinom(10,2,0.6)#
+a#
+a <- rbinom(10,2,0.6)#
+b <- rnorm(10, 0.6, 1)#
+c <- b#
+c <- ifelse(c>0.6+1, 2, c)#
+c <- ifelse(b<0.6-1, 0, c)#
+c <- ifelse(!(b<0.6-1) & !(b>0.6+1), 1, c)#
+a <- rbinom(100, 2,0.6)#
+b <- rnorm(100, 0.6, 1)#
+c <- b#
+c <- ifelse(c>0.6+1, 2, c)#
+c <- ifelse(b<0.6-1, 0, c)#
+c <- ifelse(!(b<0.6-1) & !(b>0.6+1), 1, c)#
+mean(a)#
+mean(c)#
+a <- rbinom(100, 2,0.6)#
+b <- rnorm(100, 0.6, 1)#
+c <- b#
+c <- ifelse(c>0.6+1, 2, c)#
+c <- ifelse(b<0.6-1, 0, c)#
+c <- ifelse(!(b<0.6-1) & !(b>0.6+1), 1, c)#
+#
+mean(a)#
+mean(c)#
+cut1 <- qnorm(0.33, 0.6, 1, lower.tail=T)#
+cut1#
+cut2 <- qnorm(0.33, 0.6, 1, lower.tail=F)#
+cut2#
+a <- rbinom(100, 2,0.6)#
+b <- rnorm(100, 0.6, 1)#
+cut1 <- qnorm(0.33, 0.6, 1, lower.tail=T)#
+cut2 <- qnorm(0.33, 0.6, 1, lower.tail=F)#
+#
+c <- b#
+c <- ifelse(c>cut1, 2, c)#
+c <- ifelse(b<cut2, 0, c)#
+c <- ifelse(!(b<cut2) & !(b>cut2), 1, c)#
+#
+mean(a)#
+mean(c)#
+a <- rbinom(100, 2,0.6)#
+b <- rnorm(100, 0.6, 1)#
+cut1 <- qnorm(0.25, 0.6, 1, lower.tail=T)#
+cut2 <- qnorm(0.25, 0.6, 1, lower.tail=F)#
+#
+c <- b#
+c <- ifelse(c>cut1, 2, c)#
+c <- ifelse(b<cut2, 0, c)#
+c <- ifelse(!(b<cut2) & !(b>cut2), 1, c)#
+#
+mean(a)#
+mean(c)#
+a <- rbinom(100, 2,0.6)#
+b <- rnorm(100, 0.6, 1)#
+cut1 <- qnorm(0.33, 0.6, 1, lower.tail=T)#
+cut2 <- qnorm(0.33, 0.6, 1, lower.tail=F)#
+#
+c <- b#
+c <- ifelse(b>cut1, 2, c)#
+c <- ifelse(b<cut2, 0, c)#
+c <- ifelse(!(b<cut2) & !(b>cut2), 1, c)#
+#
+mean(a)#
+mean(c)#
+set.seed(1128)#
+#
+RAF <- 0.6#
+N <- 100#
+mean <- RAF#
+sigma <- sqrt(RAF*(1-RAF))#
+#
+a <- rbinom(N, 1, RAF)#
+b <- rnorm(N, mean, sigma)#
+c <- ifelse(b>0, 1, 0)#
+#
+mean(a)#
+mean(c)#
+mean(round(b))#
+a#
+b#
+set.seed(1128)#
+#
+RAF <- 0.6#
+N <- 100#
+mean <- RAF#
+#sigma <- sqrt(RAF*(1-RAF))#
+sigma <- 1#
+#
+a <- rbinom(N, 1, RAF)#
+b <- rnorm(N, mean, sigma)#
+c <- ifelse(b>0, 1, 0)#
+#
+mean(a)#
+mean(c)#
+set.seed(1128)#
+#
+RAF <- 0.6#
+N <- 100#
+mean <- RAF#
+#sigma <- sqrt(RAF*(1-RAF))#
+sigma <- RAF*(1-RAF)#
+#
+a <- rbinom(N, 1, RAF)#
+b <- rnorm(N, mean, sigma)#
+c <- ifelse(b>0, 1, 0)#
+#
+mean(a)#
+mean(c)#
+set.seed(1128)#
+#
+RAF <- 0.6#
+N <- 100#
+mean <- RAF#
+sigma <- sqrt(RAF*(1-RAF))#
+#
+a <- rbinom(N, 1, RAF)#
+b <- rnorm(N, mean, sigma)#
+c <- ifelse(b>0, 1, 0)#
+#
+mean(a)#
+mean(c)#
+sigma#
+set.seed(1111)#
+#
+RAF <- 0.6#
+N <- 100#
+mean <- RAF#
+sigma <- sqrt(RAF*(1-RAF))#
+#
+a <- rbinom(N, 1, RAF)#
+b <- rnorm(N, mean, sigma)#
+c <- ifelse(b>0, 1, 0)#
+#
+mean(a)#
+mean(c)#
+set.seed(1111)#
+#
+RAF <- 0.8#
+N <- 100#
+mean <- RAF#
+sigma <- sqrt(RAF*(1-RAF))#
+#
+a <- rbinom(N, 1, RAF)#
+b <- rnorm(N, mean, sigma)#
+c <- ifelse(b>0, 1, 0)#
+#
+mean(a)#
+mean(c)#
+load('~/Desktop/a.RData')#
+load('~/Desktop/b.RData')#
+dim(a)#
+dim(b)#
+b[1:10, 1:10]#
+a[1:10, 1:10]#
+#
+load('~/Desktop/a.RData')#
+#
+a[1:10, 1:10]#
+#
+#
+plot(a[1,],b[1,])#
+glm.fit(a[1,],b[1,])#
+glm.fit(x=a[1,],y=b[1,])#
+#
+summary(glm.fit(x=a[1,],y=b[1,]))#
+#
+#
+summary(glm.fit(x=a[1,],y=b[1,]))$coef#
+#
+#
+str(summary(glm.fit(x=a[1,],y=b[1,])))#
+#
+#
+#
+str(summary(glm.fit(x=a[1,],y=b[1,]))[[1]]$coef#
+#
+#
+#
+#
+str(summary(glm.fit(x=a[1,],y=b[1,]))[[1]]$coef#
+summary(glm.fit(x=a[1,],y=b[1,]))[[1]]$coef#
+summary(glm.fit(x=a[1,],y=b[1,]))[[1]]#
+str(glm.fit(x=a[1,],y=b[1,]))#
+str(glm.fit(x=a[1,],y=b[1,]))$coef#
+#
+glm.fit(x=a[1,],y=b[1,])$coef#
+#
+#
+plot(a[1,]*0.4,b[1,])#
+#
+plot(a[1,]*0.4,b[1,], xlim=c(1,0), ylim=c(1,0))#
+#
+#
+plot(a[1,]*0.4,b[1,], xlim=c(0,1), ylim=c(0,1))#
+#
+#
+#
+plot(a[1,]*0.4,b[1,], xlim=c(-0.5,1), ylim=c(-0.5,1))#
+#
+#
+#
+#
+install.packages("corrgram")#
+library(corrgram)#
+corrgram(a)#
+install.packages("LDheatmap")#
+LDheatmap(a)#
+library(LDheatmap)#
+LDheatmap(a)#
+#
+data(CEUData)#
+dim(CEUSNP0)#
+dim(CEUSNP)#
+#
+CEUSNP#
+CEUDist#
+bim <- read.table("~/Desktop/EUR.bim", header=F, stringsAsFactors=F)#
+head(bim)#
+head(colnames(a))#
+rownames(bim) <- bim[,2]#
+bp <- bim[colnames(a), 2]#
+LDheatmap(a, genetic.distances=bp)#
+#
+#
+bp <- bim[colnames(a), 4]#
+#
+LDheatmap(a, genetic.distances=bp)#
+#
+#
+#
+bim["rs2075829", 4]#
+bim[bim[,4]>(78900917-10000) & bim[,4]<(78900917+10000), 2]#
+snplist <- bim[bim[,4]>(78900917-10000) & bim[,4]<(78900917+10000), 2]#
+c <- a[,snplist]#
+dim(c)#
+d <- c[snplist,]#
+identical(colnames(d), rownames(d))#
+d#
+d.bp <- bim[snplist, 4]#
+LDheatmap(d, genetic.distances=d.bp)#
+#
+#
+#
+snplist <- bim[bim[,4]>(78900917-5000) & bim[,4]<(78900917+5000), 2]#
+#
+c <- a[,snplist]#
+#
+d <- c[snplist,]#
+#
+dim9d#
+dim(d)#
+d.bp <- bim[snplist, 4]#
+#
+LDheatmap(d, genetic.distances=d.bp)#
+#
+#
+#
+#
+c2 <- b[,snplist]#
+d2 <- c2[snplist,]#
+LDheatmap(d2, genetic.distances=d.bp)#
+#
+#
+#
+#
+#
+LDheatmap(d, genetic.distances=d.bp)#
+#
+#
+#
+#
+#
+#
+LDheatmap(d2, genetic.distances=d.bp)#
+#
+#
+#
+#
+#
+#
+#
+snplist <- bim[bim[,4]>(78900917-1000) & bim[,4]<(78900917+1000), 2]#
+#
+#
+LDheatmap(d, genetic.distances=d.bp)#
+#
+#
+#
+#
+#
+#
+#
+snplist <- bim[bim[,4]>(78900917-1000) & bim[,4]<(78900917+1000), 2]#
+#
+c <- a[,snplist]#
+d <- c[snplist,]#
+d.bp <- bim[snplist, 4]#
+LDheatmap(d, genetic.distances=d.bp)#
+#
+c2 <- b[,snplist]#
+d2 <- c2[snplist,]#
+LDheatmap(d2, genetic.distances=d.bp)#
+> LDheatmap(d2, genetic.distances=d.bp)#
+LDheatmap(d, genetic.distances=d.bp)#
+LDheatmap(d2, genetic.distances=d.bp)#
+snplist <- bim[bim[,4]>(78900917-2500) & bim[,4]<(78900917+2500), 2]#
+#
+c <- a[,snplist]#
+d <- c[snplist,]#
+d.bp <- bim[snplist, 4]#
+LDheatmap(d, genetic.distances=d.bp, color=heat.colors(20))#
+#
+c2 <- b[,snplist]#
+d2 <- c2[snplist,]#
+LDheatmap(d2, genetic.distances=d.bp, color=heat.colors(20))#
+LDheatmap(d, genetic.distances=d.bp, color=heat.colors(20))#
+LDheatmap(d2, genetic.distances=d.bp, color=heat.colors(20))#
+snplist <- bim[bim[,4]>(78900917-5000) & bim[,4]<(78900917+5000), 2]#
+#
+c <- a[,snplist]#
+d <- c[snplist,]#
+d.bp <- bim[snplist, 4]#
+LDheatmap(d, genetic.distances=d.bp, color=heat.colors(20))#
+#
+c2 <- b[,snplist]#
+d2 <- c2[snplist,]#
+LDheatmap(d2, genetic.distances=d.bp, color=heat.colors(20))#
+outer(vars, vis, paste, sep=".")#
+outer(c("SNP1","SNP2","SNP3"), seq(1:10), paste, sep="_")#
+outer(seq(1:10), c("SNP1","SNP2","SNP3"), paste, sep="_")#
+#
+as.vector(outer(c("SNP1","SNP2","SNP3"), seq(1:10), paste, sep="_"))#
+data(mtcrs)#
+data(mtcars)#
+#
+head(mtcars)#
+lm(mpg ~ factor(cyl) + wt, data=mtcars)#
+lm(mpg ~ factor(cyl), data=mtcars)#
+#
+lm(mpg ~ factor(cyl) + wt*factor(cyl), data=mtcars)#
+#
+fit2 <- lm(mpg ~ factor(cyl) + wt*factor(cyl), data=mtcars)#
+fit1 <- lm(mpg ~ factor(cyl) + wt, data=mtcars)#
+install.packages("lmtest")#
+library(lmtest)#
+lrtest(fit1, fit2)#
+lrtest(fit2, fit1)#
+#
+help(mtcars)#
+x <- c(0.586, 0.166, -0.042, -0.614, 11.72)#
+y <- c(0.549, -0.026, -0.127, -0.751, 1.344)#
+influence.measures(lm(y~x))#
+plot.lm(lm(y~x))#
+par(mfrow = c(2, 2))#
+#
+plot(lm(y~x))#
+x <- c(0.586, 0.166, -0.042, -0.614, 11.72)#
+y <- c(0.549, -0.026, -0.127, -0.751, 1.344)#
+#
+influence.measures(lm(y~x))#
+#
+-1.34e+02#
+data(shuttle)#
+library(MASS)#
+data(shuttle)#
+#
+head(shuttle)#
+shuttle$Y <- ifelse(shuttle$use=="auto", 1, 0)#
+table(shuttle$wind)#
+glm(Y ~ wind, data=shuttle, family=binomial)#
+exp(-0.03181)#
+glm(Y ~ wind + magn, data=shuttle, family=binomial)#
+#
+exp(-3.201e-02)#
+data(InsectSprays)#
+head(InsectSprays)#
+glm(count ~ spray, data=InsectSprays, family=Poisson)#
+glm(count ~ spray, data=InsectSprays, family=poisson)#
+#
+exp(-0.05588)#
+glm(count ~ spray + offset(5), family = poisson)#
+glm(count ~ spray + offset(5), data=InsectSprays, family = poisson)#
+#
+glm(count ~ spray + offset(rep(5, nrow(InsectSprays))), data=InsectSprays, family = poisson)#
+#
+#
+glm(count ~ spray + offset(rep(5 + log(10), nrow(InsectSprays))), data=InsectSprays, family = poisson)#
+#
+#
+#
+x <- -5:5#
+y <- c(5.12, 3.93, 2.67, 1.87, 0.52, 0.08, 0.93, 2.05, 2.54, 3.87, 4.97)#
+plot(y, x)#
+plot(x, y)#
+#
+lm(y[6:10])#
+x[1:5]#
+x[6:10]#
+x[6:11]#
+#
+lm(I(y[6:11]) ~ I(x[6:11]))#
+x=c(140, 138, 150, 148, 135)#
+y=c(132, 135, 151, 146, 130)#
+t.test(x,y,paired=T, alternative="two.sided")#
+1100 + c(-1, 1)*qt(0.025, 8)*30/sqrt(9)#
+p=0.5#
+factorial#
+factorial(3,1)#
+factorial(1,3)#
+#
+choose(3,1)#
+choose(1,3)#
+#
+choose(4,3)*0.5^4#
+#
+#
+(choose(4,3) + choose(4,2) + choose(4,1) + choose(4,0))*0.5^4#
+(choose(4,3) + choose(4,4))*0.5^4#
+#
+ppois(10/1781, 1/100)#
+pnorm(10, 0.01*1787, 0.01*0.99*1787)#
+pnorm(10, 0.01*1787, sqrt(0.01*0.99*1787))#
+#
+pnorm(10, 0.01*1787, sqrt(0.01*0.99*1787))#
+#
+#
+sp=sqrt((8*1.5^2+8*1.8^2)/16)#
+sp#
+se=sp*sqrt(1/9+1/9)#
+t <- 4/se#
+pt(t, 16, lower.tail=F)#
+5.125872e-05*2#
+(1077+1123)/2#
+t <- 0.01/*100.04#
+t <- 0.01/0.04*10#
+pt(0.01, 99, t)#
+qt(0.05, 99, lower.tail=F)#
+pt(1.660391, 99, t)#
+t#
+power <- function(n){pt(qt(0.05, n-1, lower.tail=F), n-1, 0.01/0.04*sqrt(n))}#
+power(100)#
+power <- function(n){pt(qt(0.05, n-1, lower.tail=F), n-1, 0.01/0.04*sqrt(n), lower.tail=F)}#
+#
+power(100)#
+#
+power(120)#
+#
+#
+power(140)#
+#
+#
+#
+1100-1077#
+23/qt(0.05, 8, lower.tail=F)#
+qt(0.05, 8, lower.tail=F)#
+qt(0.05, 8, lower.tail=T)#
+#
+se= 12.3686*3#
+se#
+mu=1100#
+mu + c(-1,1)*qt(0.025, 8)*se/3#
+install.packages("swirl")#
+library(swirl)#
+rm(list=ls())#
+install_from_swirl("Statistical Inference")#
+swirl()#
+(33/36)#
+deck#
+13*4#
+4/52#
+0#
+12/52#
+2/12#
+2/51#
+0.64#
+mypdf#
+integrate(mypdf(1.6))#
+mypdf(1.6)#
+integrate(mypdf)#
+#
+integrate(mypdf, lower=T)#
+#
+#
+integrate(mypdf, lower=0, upper=1.6)#
+#
+#
+#
+2-sqrt(2)#
+sqrt(2)#
+244.62-55.69-27-46.87-20#
+exp(0.9*log(1.1))#
+exp(0.8*log(1.1))#
+#
+citation(package = "base", lib.loc = NULL, auto = NULL)#
+as.integer()#
+as.integer(1)#
+#
+as.integer(0.23)#
+#
+#
+FibonacciNumber <- function(n) {#
+  n <- as.numeric(n)#
+  if (length(n) != 1 || !is.integer(n) || n < 0) {#
+    stop(“please input a single non-negative integer.”)#
+  }#
+  if (n == 0) {#
+    x <- 0#
+  } else if (n == 1) {#
+    x <- 1#
+  } else {#
+    x <- FibonacciNumber(n - 1) + FibonacciNumber(n - 2)#
+  }#
+  return(x)#
+}#
+FibonacciNumber <- function(n) {#
+ n <- as.numeric(n)#
+ if(length(n) != 1 || !is.integer(n) || n < 0) {#
+ 	stop(“please input a single non-negative integer.”)#
+ }#
+ if (n == 0) {#
+   x <- 0#
+ } else if (n == 1) {#
+   x <- 1#
+ } else {#
+   x <- FibonacciNumber(n - 1) + FibonacciNumber(n - 2)#
+ }#
+ return(x)#
+}#
+FibonacciNumber <- function(n) {#
+ n <- as.numeric(n)#
+ if (length(n) != 1 || !is.integer(n) || n < 0) {#
+ 	stop(“please input a single non-negative integer.”)#
+ }#
+ if (n == 0) {#
+   x <- 0#
+ } else if (n == 1) {#
+   x <- 1#
+ } else {#
+   x <- FibonacciNumber(n - 1) + FibonacciNumber(n - 2)#
+ }#
+ return(x)#
+}#
+FibonacciNumber <- function(n) {#
+ n <- as.numeric(n)#
+ # if (length(n) != 1 || !is.integer(n) || n < 0) {#
+ 	# stop(“please input a single non-negative integer.”)#
+ # }#
+ if (n == 0) {#
+   x <- 0#
+ } else if (n == 1) {#
+   x <- 1#
+ } else {#
+   x <- FibonacciNumber(n - 1) + FibonacciNumber(n - 2)#
+ }#
+ return(x)#
+}#
+FibonacciNumber <- function(n) {#
+ 	n <- as.numeric(n)#
+	if (length(n) != 1 || !is.integer(n) || n < 0) {#
+ 		stop(“please input a single non-negative integer.”)#
+ 	}#
+ if (n == 0) {#
+   x <- 0#
+ } else if (n == 1) {#
+   x <- 1#
+ } else {#
+   x <- FibonacciNumber(n - 1) + FibonacciNumber(n - 2)#
+ }#
+ return(x)#
+}#
+FibonacciNumber <- function(n) {#
+ 	n <- as.numeric(n)#
+if (length(n) != 1 || !is.integer(n) || n < 0) {#
+stop(“please input a single non-negative integer.”)#
+}#
+ if (n == 0) {#
+   x <- 0#
+ } else if (n == 1) {#
+   x <- 1#
+ } else {#
+   x <- FibonacciNumber(n - 1) + FibonacciNumber(n - 2)#
+ }#
+ return(x)#
+}#
+FibonacciNumber <- function(n) {#
+ 	n <- as.numeric(n)#
+	if (length(n) != 1 || !is.integer(n) || n < 0) {#
+		stop(“please input a single non-negative integer.”)#
+	}#
+ if (n == 0) {#
+   x <- 0#
+ } else if (n == 1) {#
+   x <- 1#
+ } else {#
+   x <- FibonacciNumber(n - 1) + FibonacciNumber(n - 2)#
+ }#
+ return#
+FibonacciNumber <- function(n) {#
+ 	n <- as.numeric(n)#
+	if (length(n) != 1 || !is.integer(n) || n < 0) {#
+		stop(“please input a single non-negative integer.”)#
+	}#
+ if (n == 0) {#
+   x <- 0#
+ } else if (n == 1) {#
+   x <- 1#
+ } else {#
+   x <- FibonacciNumber(n - 1) + FibonacciNumber(n - 2)#
+ }#
+ return(x)#
+}#
+FibonacciNumber <- function(n) {#
+ 	n <- as.numeric(n)#
+	if(length(n) != 1 || !is.integer(n) || n < 0) {#
+		stop(“please input a single non-negative integer.”)#
+	}#
+ if (n == 0) {#
+   x <- 0#
+ } else if (n == 1) {#
+   x <- 1#
+ } else {#
+   x <- FibonacciNumber(n - 1) + FibonacciNumber(n - 2)#
+ }#
+ return(x)#
+}#
+FibonacciNumber <- function(n) {#
+ 	n <- as.numeric(n)#
+	if(length(n) != 1 || !is.integer(n) || n < 0) {#
+	 stop("1")#
+	}#
+ if (n == 0) {#
+   x <- 0#
+ } else if (n == 1) {#
+   x <- 1#
+ } else {#
+   x <- FibonacciNumber(n - 1) + FibonacciNumber(n - 2)#
+ }#
+ return(x)#
+}#
+FibonacciNumber <- function(n) {#
+ 	n <- as.numeric(n)#
+	if(length(n) != 1 || !is.integer(n) || n < 0) {#
+	 stop("please input a single non-negative integer.")#
+	}#
+ if (n == 0) {#
+   x <- 0#
+ } else if (n == 1) {#
+   x <- 1#
+ } else {#
+   x <- FibonacciNumber(n - 1) + FibonacciNumber(n - 2)#
+ }#
+ return(x)#
+}#
+FibonacciNumber(NULL)#
+FibonacciNumber(NA)#
+#
+as.numeric(NULL)#
+length(as.numeric(NULL))#
+is.integer(as.numeric(NULL))#
+is.integer(as.numeric(NA))#
+#
+is.integer(as.numeric(NA))#
+#
+#
+length(as.numeric(NA))#
+#
+as.numeric(NA)#
+FindMedian <- function(x) {#
+  n <- length(x)#
+  # sort x from smallest to largest#
+  while (TRUE) {#
+  swapCount <- 0#
+  for (k in 1:(n - 1)) {#
+    if (x[k] > x[k + 1]) {#
+      swapCount <- swapCount + 1#
+      temp <- x[k]#
+      x[k] <-  x[k + 1]#
+      x[k + 1] <- temp#
+    }#
+  }#
+  if (swapCount == 0) {#
+    break#
+  }#
+  }#
+  # x is sorted#
+  i <- floor((n + 1) / 2)#
+  y <- x[i]#
+  return(y)#
+}#
+FindMedian(x)#
+x <- 6:1#
+FindMedian(x)#
+#
+sort#
+sort()#
+order#
+radixsort\#
+radixsort#
+1 : 5#
+Merge <- function(l, r) {#
+  n.l <- length(l)#
+  n.r <- length(r)#
+  p.l <- 1#
+  p.r <- 1#
+  y <- c()#
+#
+  while(TRUE) {#
+  if (l[p.l] < r[p.r]) {#
+    y <- c(y, l[p.l])#
+    if (p.l < n.l) {#
+      p.l <- p.l + 1#
+    }#
+  } else {#
+    y <- c(y, r[p.r])#
+    if (p.r < n.r) {#
+      p.r <- p.r + 1#
+    }#
+  }#
+  if (p.l == n.l && p.r == n.r) {#
+    break#
+  }#
+  }#
+#
+  return(y)#
+}#
+x <- 5:1#
+MergeSort(x)#
+Merge(1:3, 6:3)#
+Merge <- function(l, r) {#
+  n.l <- length(l)#
+  n.r <- length(r)#
+  p.l <- 1#
+  p.r <- 1#
+  y <- c()#
+#
+  while(TRUE) {#
+  if (l[p.l] < r[p.r]) {#
+    y <- c(y, l[p.l])#
+    if (p.l < n.l) {#
+      p.l <- p.l + 1#
+    } else {#
+      y <- c(y, r[p.r : n.r]#
+      return(y)#
+    }#
+  } else {#
+    y <- c(y, r[p.r])#
+    if (p.r < n.r) {#
+      p.r <- p.r + 1#
+    } else {#
+      y <- c(y, l[p.l : n.l]#
+      return(y)#
+    }#
+  }#
+  }#
+}#
+#
+Merge <- function(l, r) {#
+  n.l <- length(l)#
+  n.r <- length(r)#
+  p.l <- 1#
+  p.r <- 1#
+  y <- c()#
+#
+  while(TRUE) {#
+  if (l[p.l] < r[p.r]) {#
+    y <- c(y, l[p.l])#
+    if (p.l < n.l) {#
+      p.l <- p.l + 1#
+    } else {#
+      y <- c(y, r[p.r : n.r])#
+      return(y)#
+    }#
+  } else {#
+    y <- c(y, r[p.r])#
+    if (p.r < n.r) {#
+      p.r <- p.r + 1#
+    } else {#
+      y <- c(y, l[p.l : n.l])#
+      return(y)#
+    }#
+  }#
+  }#
+}#
+Merge(1:3, 6:4)#
+MergeSort <- function(x) {#
+  n <- length(x)#
+  if (n > 1){#
+    left <- x[1 : ceiling(n/2)]#
+    right <- x[(ceiling(n/2) + 1) : n]#
+    left.sorted < - MergeSort(left)#
+    right.sorted < - MergeSort(right)  #
+    x.sorted <- Merge(left.sorted, right.sorted)#
+    return(x.sorted)#
+  } else {#
+    return(x)#
+  }#
+}#
+mmerge<-function(a,b) {#
+    r<-numeric(length(a)+length(b))#
+    ai<-1; bi<-1; j<-1;#
+    for(j in 1:length(r)) {#
+        if((ai<=length(a) && a[ai]<b[bi]) || bi>length(b)) {#
+            r[j] <- a[ai]#
+            ai <- ai+1#
+        } else {#
+            r[j] <- b[bi]#
+            bi <- bi+1          #
+        }#
+    }#
+    r#
+}#
+mmergesort<-function(A) {#
+    if(length(A)>1) {#
+        q <- ceiling(length(A)/2)#
+        a <- mmergesort(A[1:q])#
+        b <- mmergesort(A[(q+1):length(A)])#
+        mmerge(a,b)#
+    } else {#
+        A#
+    }#
+}#
+mmergesort(5:1)#
+n <- length(x)#
+#
+MergeSort <- function(x) {#
+  browser()#
+  n <- length(x)#
+  if (n > 1){#
+    left <- x[1 : ceiling(n/2)]#
+    right <- x[(ceiling(n/2) + 1) : n]#
+    left.sorted < - MergeSort(left)#
+    right.sorted < - MergeSort(right)  #
+    x.sorted <- Merge(left.sorted, right.sorted)#
+    return(x.sorted)#
+  } else {#
+    return(x)#
+  }#
+}#
+n <- length(x)#
+n#
+length(x)#
+left <- x[1 : ceiling(n/2)]#
+left#
+right <- x[(ceiling(n/2) + 1) : n]#
+right#
+left.sorted < - MergeSort(left)#
+MergeSort <- function(x) {#
+  browser()#
+  n <- length(x)#
+  if (n > 1){#
+    left <- x[1 : ceiling(n/2)]#
+    right <- x[(ceiling(n/2) + 1) : n]#
+    left.sorted <- MergeSort(left)#
+    right.sorted <- MergeSort(right)  #
+    x.sorted <- Merge(left.sorted, right.sorted)#
+    return(x.sorted)#
+  } else {#
+    return(x)#
+  }#
+}#
+#
+Merge <- function(l, r) {#
+  n.l <- length(l)#
+  n.r <- length(r)#
+  p.l <- 1#
+  p.r <- 1#
+  y <- c()#
+#
+  while(TRUE) {#
+  if (l[p.l] < r[p.r]) {#
+    y <- c(y, l[p.l])#
+    if (p.l < n.l) {#
+      p.l <- p.l + 1#
+    } else {#
+      y <- c(y, r[p.r : n.r])#
+      return(y)#
+    }#
+  } else {#
+    y <- c(y, r[p.r])#
+    if (p.r < n.r) {#
+      p.r <- p.r + 1#
+    } else {#
+      y <- c(y, l[p.l : n.l])#
+      return(y)#
+    }#
+  }#
+  }#
+}#
+MergeSort(5:1)#
+Q#
+  # merge sort#
+MergeSort <- function(x) {#
+  #browser()#
+  n <- length(x)#
+  if (n > 1){#
+    left <- x[1 : ceiling(n/2)]#
+    right <- x[(ceiling(n/2) + 1) : n]#
+    left.sorted <- MergeSort(left)#
+    right.sorted <- MergeSort(right)  #
+    x.sorted <- Merge(left.sorted, right.sorted)#
+    return(x.sorted)#
+  } else {#
+    return(x)#
+  }#
+}#
+#
+Merge <- function(l, r) {#
+  n.l <- length(l)#
+  n.r <- length(r)#
+  p.l <- 1#
+  p.r <- 1#
+  y <- c()#
+#
+  while(TRUE) {#
+  if (l[p.l] < r[p.r]) {#
+    y <- c(y, l[p.l])#
+    if (p.l < n.l) {#
+      p.l <- p.l + 1#
+    } else {#
+      y <- c(y, r[p.r : n.r])#
+      return(y)#
+    }#
+  } else {#
+    y <- c(y, r[p.r])#
+    if (p.r < n.r) {#
+      p.r <- p.r + 1#
+    } else {#
+      y <- c(y, l[p.l : n.l])#
+      return(y)#
+    }#
+  }#
+  }#
+}#
+ MergeSort(5:1)#
+apply(A, 2, function(x) {#
+  if (is.numeric(x)) {#
+    return(percentile(x, 0.95))#
+  }#
+})#
+A <- data.frame(1:5, 6:10)#
+A <- data.frame(1:5, 6:10, char(1:5))#
+A <- data.frame(1:5, 6:10, chr(1:5))#
+#
+percentile#
+percentile()#
+quantile()#
+A <- data.frame(1:5, 6:10, letters(1:5))#
+#
+#
+A <- data.frame(1:5, 6:10, letter(1:5))#
+#
+#
+#
+letter#
+letter()#
+letters()#
+Letters()#
+#
+A <- data.frame(1:5, 6:10, letters[1:5])#
+#
+#
+#
+A#
+apply(A, 2, function(x) {#
+  if (is.numeric(x)) {#
+    return(quantile(x, 0.95))#
+  }#
+})#
+apply(A, 2, function(x) {#
+  if (is.numeric(x)) {#
+    return(quantile(x, 0.95))#
+  } else {#
+    return(NULLNA)#
+  }#
+})#
+#
+apply(A, 2, function(x) {#
+  if (is.numeric(x)) {#
+    return(quantile(x, 0.95))#
+  } else {#
+    return(NULL)#
+  }#
+})#
+apply(A, 2, function(x) {#
+  if (is.numeric(x)) {#
+    return(quantile(x, 0.95))#
+  } else {#
+    next#
+  }#
+})#
+apply(A, 2, function(x) {#
+  if (is.numeric(x)) {#
+    return(quantile(x, 0.95))#
+  } else {#
+    return(NA)#
+  }#
+})#
+apply(A, 2, function(x) {#
+  if (is.numeric(x)) {#
+    y <- quantile(x, 0.95)#
+    return(y)#
+  } else {#
+    return(NA)#
+  }#
+})#
+y#
+6 %/% 2#
+6 % 2#
+#
+6.5 %/% 2#
+#
+6.5 %% 2#
+#
+#
+sapply(c(2, 3, 5, 7), function(y) {#
+				16 %% y#
+			}#
+)#
+#
+#
+# Find prime numbers among positive integers up to n#
+#
+FindPrimeNums <- function(n) {#
+	primeNums <- c()	# prime number: cannot be divided by other prime numbers w/o remainder#
+	#
+	for (x in 2 : n) {#
+		if (x == 2) {	# 2 is the smallest prime number#
+			primeNums <- c(primeNums, x)	#
+		} else if {#
+			remainders <- sapply(primeNums, function(y) {#
+				x %% y#
+			})#
+			if (all(remainders != 0)) {#
+				primeNums <- c(primeNums, x)#
+			}#
+		}#
+	}#
+	#
+	return(primeNums)#
+}#
+#
+#
+# Find prime numbers among positive integers up to n#
+#
+FindPrimeNums <- function(n) {#
+	primeNums <- c()	# prime number: cannot be divided by other prime numbers w/o remainder#
+	#
+	for (x in 2 : n) {#
+		if (x == 2) {	# 2 is the smallest prime number#
+			primeNums <- c(primeNums, x)	#
+		} else {#
+			remainders <- sapply(primeNums, function(y) {#
+				x %% y#
+			})#
+			if (all(remainders != 0)) {#
+				primeNums <- c(primeNums, x)#
+			}#
+		}#
+	}#
+	#
+	return(primeNums)#
+}#
+FindPrimeNums(100)#
+FindPairs <- function(n) {#
+	pairs <- data.frame()#
+	#
+	primeNums <- FindPrimeNums(n)#
+	for (i in 1 : (length(primeNums) - 1)) {#
+		for (j in (i + 1) : length(primeNums)) {#
+			if (primeNums[i] + primeNums[j] == n) {#
+				pairs <- rbind(pairs, primeNums[c(i, j)])#
+			}#
+		}#
+	}#
+	#
+	return(pairs)#
+}#
+FindPairs(100)#
+FindPairs(999)#
+#
+1-0.9^50#
+0.5+1.96*0.2#
+#
+## all possible assignments of x users into group 1 (n) and group 0 (x - n)#
+#
+FindAssign <- function(x, n){#
+	#
+	M <- data.frame()#
+	#
+	if (n == x) {#
+		M <- cbind(M, rep(1, n))#
+	} else if (n == 1) {#
+		for (i in 1 : x) {#
+			temp <- rep(0, x)#
+			temp[i] <- 1#
+			M <- cbind(M, temp)#
+		}#
+	} else {#
+		for (i in 1 : (x - n + 1)){#
+			temp <- rep(0, x)#
+			temp[i] <- 1#
+			for(v in FindAssign(x - i, n - 1)) {#
+				temp2 <- temp + v#
+				M <- cbind(M, temp2)#
+			}#
+		}#
+	}#
+	#
+	return(M)#
+}#
+FindAssign(1, 2)#
+FindAssign(2, 1)#
+#
+#
+## all possible assignments of x users into group 1 (n) and group 0 (x - n)#
+#
+FindAssign <- function(x, n){#
+	#
+	M <- c()#
+	#
+	if (n == x) {#
+		M <- cbind(M, rep(1, n))#
+	} else if (n == 1) {#
+		for (i in 1 : x) {#
+			temp <- rep(0, x)#
+			temp[i] <- 1#
+			M <- cbind(M, temp)#
+		}#
+	} else {#
+		for (i in 1 : (x - n + 1)){#
+			temp <- rep(0, x)#
+			temp[i] <- 1#
+			for(v in FindAssign(x - i, n - 1)) {#
+				temp2 <- temp + v#
+				M <- cbind(M, temp2)#
+			}#
+		}#
+	}#
+	#
+	return(M)#
+}#
+FindAssign(2, 1)#
+FindAssign(4, 2)#
+#
+#
+## all possible assignments of x users into group 1 (n) and group 0 (x - n)#
+#
+FindAssign <- function(x, n){#
+	#
+	M <- c()#
+	#
+	if (n == x) {#
+		M <- cbind(M, rep(1, n))#
+	} else if (n == 1) {#
+		for (i in 1 : x) {#
+			temp <- rep(0, x)#
+			temp[i] <- 1#
+			M <- cbind(M, temp)#
+		}#
+	} else {#
+		for (i in 1 : (x - n + 1)){#
+			temp <- rep(0, x)#
+			temp[i] <- 1#
+			for(v in FindAssign(x - i - 1, n - 1)) {#
+				temp2 <- temp + v#
+				M <- cbind(M, temp2)#
+			}#
+		}#
+	}#
+	#
+	return(M)#
+}#
+#
+## all possible assignments of x users into group 1 (n) and group 0 (x - n)#
+#
+FindAssign <- function(x, n){#
+	#
+	M <- c()#
+	#
+	if (n == x) {#
+		M <- cbind(M, rep(1, n))#
+	} else if (n == 1) {#
+		for (i in 1 : x) {#
+			temp <- rep(0, x)#
+			temp[i] <- 1#
+			M <- cbind(M, temp)#
+		}#
+	} else {#
+		for (i in 1 : (x - n + 1)){#
+			temp <- rep(0, i)#
+			temp[i] <- 1#
+			for(v in FindAssign(x - i, n - 1)) {#
+				temp <- c(temp, v)#
+				M <- cbind(M, temp)#
+			}#
+		}#
+	}#
+	#
+	return(M)#
+}#
+FindAssign <- function(x, n){#
+	browser()#
+	M <- c()#
+	#
+	if (n == x) {#
+		M <- cbind(M, rep(1, n))#
+	} else if (n == 1) {#
+		for (i in 1 : x) {#
+			temp <- rep(0, x)#
+			temp[i] <- 1#
+			M <- cbind(M, temp)#
+		}#
+	} else {#
+		for (i in 1 : (x - n + 1)){#
+			temp <- rep(0, i)#
+			temp[i] <- 1#
+			for(v in FindAssign(x - i, n - 1)) {#
+				temp <- c(temp, v)#
+				M <- cbind(M, temp)#
+			}#
+		}#
+	}#
+	#
+	return(M)#
+}#
+M <- c()#
+i = 1#
+temp <- rep(0, i)#
+temp[i] <- 1#
+FindAssign(3, 1)#
+n#
+	M <- c()#
+x#
+		for (i in 1 : x) {#
+			temp <- rep(0, x)#
+			temp[i] <- 1#
+			M <- cbind(M, temp)#
+		}#
+#
+## all possible assignments of x users into group 1 (n) and group 0 (x - n)#
+#
+FindAssign <- function(x, n){#
+	browser()#
+	M <- c()#
+	#
+	if (n == x) {#
+		M <- cbind(M, rep(1, n))#
+	} else if (n == 1) {#
+		for (i in 1 : x) {#
+			temp <- rep(0, x)#
+			temp[i] <- 1#
+			M <- cbind(M, temp)#
+		}#
+	} else {#
+		for (i in 1 : (x - n + 1)){#
+			temp <- rep(0, i)#
+			temp[i] <- 1#
+			M.sub <- FindAssign(x - i, n - 1)#
+			for(j in 1 : ncol(M.sub)) {#
+				temp <- c(temp, M.sub[, j])#
+				M <- cbind(M, temp)#
+			}#
+		}#
+	}#
+	#
+	return(M)#
+}#
+#
+## all possible assignments of x users into group 1 (n) and group 0 (x - n)#
+#
+FindAssign <- function(x, n){#
+	#browser()#
+	M <- c()#
+	#
+	if (n == x) {#
+		M <- cbind(M, rep(1, n))#
+	} else if (n == 1) {#
+		for (i in 1 : x) {#
+			temp <- rep(0, x)#
+			temp[i] <- 1#
+			M <- cbind(M, temp)#
+		}#
+	} else {#
+		for (i in 1 : (x - n + 1)){#
+			temp <- rep(0, i)#
+			temp[i] <- 1#
+			M.sub <- FindAssign(x - i, n - 1)#
+			for(j in 1 : ncol(M.sub)) {#
+				temp <- c(temp, M.sub[, j])#
+				M <- cbind(M, temp)#
+			}#
+		}#
+	}#
+	#
+	return(M)#
+}#
+#
+## all possible assignments of x users into group 1 (n) and group 0 (x - n)#
+#
+FindAssign <- function(x, n){#
+	#browser()#
+	M <- c()#
+	#
+	if (n == x) {#
+		M <- cbind(M, rep(1, n))#
+	} else if (n == 1) {#
+		for (i in 1 : x) {#
+			temp <- rep(0, x)#
+			temp[i] <- 1#
+			M <- cbind(M, temp)#
+		}#
+	} else {#
+		for (i in 1 : (x - n + 1)){#
+			temp <- rep(0, i)#
+			temp[i] <- 1#
+			M.sub <- FindAssign(x - i, n - 1)#
+			for(j in 1 : ncol(M.sub)) {#
+				browser()#
+				temp <- c(temp, M.sub[, j])#
+				M <- cbind(M, temp)#
+			}#
+		}#
+	}#
+	#
+	return(M)#
+}#
+i#
+t = c()#
+t#
+i=2#
+temp <- rep(0, i)#
+			temp[i] <- 1#
+			M.sub <- FindAssign(x - i, n - 1)#
+j#
+M.sub#
+M#
+ncol(M.sub)#
+j=2#
+temp <- c(temp, M.sub[, j])#
+				M <- cbind(M, temp)#
+temp#
+Q#
+#
+## all possible assignments of x users into group 1 (n) and group 0 (x - n)#
+#
+FindAssign <- function(x, n){#
+	#browser()#
+	M <- c()#
+	#
+	if (n == x) {#
+		M <- cbind(M, rep(1, n))#
+	} else if (n == 1) {#
+		for (i in 1 : x) {#
+			temp <- rep(0, x)#
+			temp[i] <- 1#
+			M <- cbind(M, temp)#
+		}#
+	} else {#
+		for (i in 1 : (x - n + 1)){#
+			temp.left <- rep(0, i)#
+			temp.left[i] <- 1#
+			M.sub <- FindAssign(x - i, n - 1)#
+			for(j in 1 : ncol(M.sub)) {#
+				temp.right <- M.sub[, j]#
+				temp <- c(temp.left, temp.right)#
+				M <- cbind(M, temp)#
+			}#
+		}#
+	}#
+	#
+	return(M)#
+}#
+FindAssign(10, 5)#
+#
+#
+## all possible assignments of x users into group 1 (n) and group 0 (x - n)#
+#
+FindAssign <- function(x, n){#
+	#browser()#
+	M <- c()#
+	#
+	if (n == x) {#
+		M <- cbind(M, rep(1, n))#
+	} else if (n == 1) {#
+		for (i in 1 : x) {#
+			temp <- rep(0, x)#
+			temp[i] <- 1#
+			M <- cbind(M, temp)#
+		}#
+	} else {#
+		for (i in 1 : (x - n + 1)){#
+			temp.left <- rep(0, i)#
+			temp.left[i] <- 1#
+			M.sub <- FindAssign(x - i, n - 1)#
+			for(j in 1 : ncol(M.sub)) {#
+				temp.right <- M.sub[, j]#
+				temp <- c(temp.left, temp.right)#
+				M <- cbind(M, temp)#
+			}#
+		}#
+	}#
+	#
+	colnames(M) <- NULL#
+	return(M)#
+}#
+FindAssign(4, 2)#
+log(10000000, 2)#
+
+library(pROC)#
+
+setwd('/Users/Serena/Career/Insight/FlySmart')#
+
+d = read.csv('test_liftchart.csv', header=T, stringsAsFactors=F)#
+
+roc(d[,3] %in% 1, d[,2])#
+
+roc = roc(d[,3] %in% 1, d[,2])#
+
+plot(roc)#
+
+plot(roc, color='red')#
+
+plot(roc, col='red')#
+
+plot(roc, col='grey')#
+
+str(roc)#
+

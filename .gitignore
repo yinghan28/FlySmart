@@ -1,0 +1,13 @@
+*.ipynb
+*.pyc
+*train.pkl
+*test.pkl
+*raw.pkl
+*.csv
+*-checkpoint.ipynb
+credentials.json
+*.R
+*.pdf
+*.txt
+*.pkl
+*credentials
