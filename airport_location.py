@@ -1,31 +1,9 @@
-
-# coding: utf-8
-
-# In[6]:
-
 ### find the latitude and longtitude for a given airport
 
 import pandas as pd
 from sqlalchemy import create_engine
 from sqlalchemy_utils import database_exists, create_database
 import psycopg2
-
-
-# In[2]:
-
-# with open('local_db_credentials', 'r') as f:
-#    credentials = f.readlines()
-#    f.close()
-    
-# dbname = 'flight_db'
-# user = credentials[0].rstrip()
-# pswd = credentials[1].rstrip()
-
-# con = None
-# con = psycopg2.connect(database = dbname, user = username, host='localhost', password=pswd)
-
-
-# In[ ]:
 
 def connect_to_db():
     
@@ -48,14 +26,8 @@ def connect_to_db():
     
     return connection
 
-
-# In[3]:
-
 # connect:
 con = connect_to_db()
-
-
-# In[14]:
 
 # query: 
 def airport_lat_long(Airport):
