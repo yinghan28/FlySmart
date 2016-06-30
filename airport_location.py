@@ -5,6 +5,7 @@ from sqlalchemy import create_engine
 from sqlalchemy_utils import database_exists, create_database
 import psycopg2
 
+
 def connect_to_db():
     
     host   = 'postgresinstance.c0dzm7nvb0nh.us-west-2.rds.amazonaws.com:5432'
@@ -26,8 +27,10 @@ def connect_to_db():
     
     return connection
 
+
 # connect:
 con = connect_to_db()
+
 
 # query: 
 def airport_lat_long(Airport):

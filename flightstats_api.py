@@ -1,7 +1,4 @@
-
-# coding: utf-8
-
-# In[1]:
+### query flights based on the most recent schedule
 
 import urllib2
 import json
@@ -10,16 +7,7 @@ import pprint
 import datetime as dt
 
 
-# In[2]:
-
-# departureAirportCode = 'SFO'
-# arrivalAirportCode = 'LAX'
-# Date = '2016-06-30'
-# DepOrArr = 'Departure'
-
-
-# In[3]:
-
+## flights on a given departure or arrival date
 def flights_query(departureAirportCode, arrivalAirportCode, Date, DepOrArr):
     year, month, day = Date.split('-')
     
@@ -30,7 +18,10 @@ def flights_query(departureAirportCode, arrivalAirportCode, Date, DepOrArr):
     else:
         print "Error: please enter 'Departure' or 'Arrival'"
         
-    f = urllib2.urlopen('https://api.flightstats.com/flex/schedules/rest/v1/json/from/'                         + departureAirportCode + '/to/' + arrivalAirportCode                         + '/' + direction + '/' + year + '/' + month + '/' + day                         + '?appId=5d2ec7ba&appKey=fc2de9feb8ccb8e929a66bb0fd4657ec')
+    f = urllib2.urlopen('https://api.flightstats.com/flex/schedules/rest/v1/json/from/'
+                        + departureAirportCode + '/to/' + arrivalAirportCode
+                        + '/' + direction + '/' + year + '/' + month + '/' + day
+                        + '?appId=5d2ec7ba&appKey=fc2de9feb8ccb8e929a66bb0fd4657ec')
     json_string = f.read()
     parsed_json = json.loads(json_string)
 
@@ -52,9 +43,7 @@ def flights_query(departureAirportCode, arrivalAirportCode, Date, DepOrArr):
     flights.columns = ['Carrier', 'FlightNumber', 'DepDate', 'DepTime', 'ArrDate', 'ArrTime']
     return flights
 
-
-# In[15]:
-
+## flights within 3 days
 def flights_3days_query(departureAirportCode, arrivalAirportCode, Date, DepOrArr):
     previousDate = str((dt.datetime.strptime(Date, '%Y-%m-%d') 
                         + dt.timedelta(days = -1)).date())
@@ -70,8 +59,6 @@ def flights_3days_query(departureAirportCode, arrivalAirportCode, Date, DepOrArr
                                              ignore_index=True)
     return flights_3days
 
-
-# In[14]:
 
 if __name__ == '__main__':
     flights_3days_query(departureAirportCode, arrivalAirportCode, Date, DepOrArr)

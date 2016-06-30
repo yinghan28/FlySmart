@@ -1,9 +1,4 @@
-
-# coding: utf-8
-
-# In[29]:
-
-### prediction on user input data using random forest
+### delay risk prediction based on user input
 
 import os
 import numpy as np
@@ -17,36 +12,10 @@ import psycopg2
 from weather_underground_api import *
 from flightstats_api import flights_3days_query
 
-
-# In[2]:
-
-# features = pickle.load(open("/Users/Serena/Career/Insight/FlySmart/features.pkl", "rb"))
-# rfc = pickle.load(open("/Users/Serena/Career/Insight/FlySmart/RandomForest.pkl", "rb"))
-# ecdf = pickle.load(open("/Users/Serena/Career/Insight/FlySmart/ECDF_ValidationData.pkl", "rb"))
-
-
-# In[3]:
-
-# with open('local_db_credentials', 'r') as f:
-#    credentials = f.readlines()
-#    f.close()
-    
-# dbname = 'flight_db'
-# user = credentials[0].rstrip()
-# pswd = credentials[1].rstrip()
-
-# con = None
-# con = psycopg2.connect(database = dbname, user = username, host='localhost', password=pswd)
-
-
-# In[ ]:
-
 features = pickle.load(open("/home/ubuntu/features.pkl", "rb"))
 rfc = pickle.load(open("/home/ubuntu/RandomForest.pkl", "rb"))
 ecdf = pickle.load(open("/home/ubuntu/ECDF_ValidationData.pkl", "rb"))
 
-
-# In[ ]:
 
 def connect_to_db():
     
@@ -70,33 +39,19 @@ def connect_to_db():
     return connection
 
 
-# In[4]:
-
 # connect:
 con = connect_to_db()
 
-
-# In[64]:
-
-# User input
-Origin = 'LAX'
-Dest = 'SFO'
-Date = '2016-06-21'
-Time = '12'
-DepOrArr = 'Arrival'
-
-
-# In[6]:
-
-weather_features = ['airtemp', 'dewpointtemp', 'sealevelpressure', 'winddirection', 
-                    'windspeed', 'precipdepth1hr']
-continuous_features = ['crselapsedtime', 'distance', 'daysfromholiday', 'speed']                     + [x + '_origin' for x in weather_features]                     + [x + '_dest' for x in weather_features]
+# features used in the model
+weather_features = ['airtemp', 'dewpointtemp', 'sealevelpressure',
+                    'winddirection', 'windspeed', 'precipdepth1hr']
+continuous_features = ['crselapsedtime', 'distance', 'daysfromholiday', 'speed']
+                    + [x + '_origin' for x in weather_features]
+                    + [x + '_dest' for x in weather_features]
 categorical_features = ['quarter', 'month', 'dayofmonth', 'dayofweek', 
                         'deptimeblk', 'arrtimeblk', 
                         'origin', 'dest', 'carrier']
 
-
-# In[7]:
 
 def calculate_daysfromholiday(flight_datetime):
     # query: US holidays in 2016
@@ -110,8 +65,6 @@ def calculate_daysfromholiday(flight_datetime):
     return days_from_holiday
 
 
-# In[8]:
-
 def distance_between_airports(Origin, Dest):
     # query: distance between airports
     sql_query = """
@@ -121,8 +74,6 @@ def distance_between_airports(Origin, Dest):
     return distance.ix[0, 0]
 
 
-# In[9]:
-
 def createTimeBulk(Hour):
     if Hour >= 0 and Hour <= 5:
         TimeBulk = '0001-0559'
@@ -131,8 +82,6 @@ def createTimeBulk(Hour):
         TimeBulk = Hour_padded + '00-' + Hour_padded + '59'
     return TimeBulk
 
-
-# In[10]:
 
 def create_dummy_var(df, desired_features, categorical_feature):
     dummy_df = pd.DataFrame()
@@ -146,8 +95,6 @@ def create_dummy_var(df, desired_features, categorical_feature):
     dummy_df.columns = columns
     return dummy_df
 
-
-# In[191]:
 
 def delay_prob_prediction(Origin, Dest, Date, Time, DepOrArr):
     
@@ -205,9 +152,19 @@ def delay_prob_prediction(Origin, Dest, Date, Time, DepOrArr):
         ArrTimeBlk = createTimeBulk(ArrHour)
         
         # airport weather
-        Origin_weather = parse_weather(get_forecast(Origin_weather_10days, int(DepYear), int(DepMonth), int(DepDay), DepHour))
+        Origin_weather = parse_weather(get_forecast(Origin_weather_10days,
+                                                    int(DepYear),
+                                                    int(DepMonth),
+                                                    int(DepDay),
+                                                    DepHour)
+                                       )
         Origin_weather.index = Origin_weather.index + '_Origin'
-        Dest_weather = parse_weather(get_forecast(Dest_weather_10days, int(ArrYear), int(ArrMonth), int(ArrDay), ArrHour))
+        Dest_weather = parse_weather(get_forecast(Dest_weather_10days,
+                                                  int(ArrYear),
+                                                  int(ArrMonth),
+                                                  int(ArrDay),
+                                                  ArrHour)
+                                     )
         Dest_weather.index = Dest_weather.index + '_Dest'
         
         # flight info
@@ -263,20 +220,12 @@ def delay_prob_prediction(Origin, Dest, Date, Time, DepOrArr):
     
     ## predictive probability (target: delay > 30min)
     p = ecdf(rfc.predict_proba(d)[:, 1])
-    #p = rfc.predict_proba(d)[:, 1]
-    #pct = [str(int(round(x*100))) + '%' for x in p]
     flight_schedule['ProbDelay'] = p
     return flight_schedule
 
 
-# In[192]:
-
 if __name__ == '__main__':
-    #data = delay_prob_prediction(Origin, Dest, Date, Time, DepOrArr)
-
-    #str(int(round(p*100))) + '%'
-    p = delay_prob_prediction(Origin, Dest, Date, Time, DepOrArr)
-    #print 'This flight has a %.0f%% chance of delay.' % (100 * p)
+    delay_prob_prediction(Origin, Dest, Date, Time, DepOrArr)
 
 
 
